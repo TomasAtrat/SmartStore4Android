@@ -1,5 +1,9 @@
 package com.zebra.rfid.demo.sdksample.models;
 
+import androidx.annotation.Nullable;
+
+import java.util.Objects;
+
 public class InventoryDetail {
     private Long id;
     private Integer supposedQty;
@@ -63,7 +67,5 @@ public class InventoryDetail {
 
     public InventoryDetail() {
     }
-
-
 }
 

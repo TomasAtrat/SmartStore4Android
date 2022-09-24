@@ -3,6 +3,8 @@ package com.zebra.rfid.demo.sdksample.services;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.API_URL;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.GET_INVENTORY_DETAILS_SERVICE;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.INVENTORY_SERVICE;
+import static com.zebra.rfid.demo.sdksample.views.inventory.PerformInventoryActivity.counterByBarcode;
+import static com.zebra.rfid.demo.sdksample.views.inventory.PerformInventoryActivity.details;
 
 import android.content.Context;
 import android.util.Log;
@@ -21,6 +23,8 @@ import com.zebra.rfid.demo.sdksample.utils.wrappers.ListOfInventories;
 
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -74,11 +78,19 @@ public class InventoryService {
     private void setInventoryDetailsIntoList(JSONObject response, ListView detailsList) {
         InventoryData inventoryData = new Gson().fromJson(response.toString(), InventoryData.class);
 
-        List<InventoryDetail> details = inventoryData.getDetails();
+        details = new ArrayList<>(inventoryData.getDetails());
+
+        counterByBarcode = convertDetailsListToHashMap(details);
 
         ArrayAdapter<InventoryDetail> adapter = new ArrayAdapter<>(context, android.R.layout.simple_list_item_1, details);
 
         detailsList.setAdapter(adapter);
+    }
+
+    private HashMap<InventoryDetail, Integer> convertDetailsListToHashMap(List<InventoryDetail> details) {
+        HashMap<InventoryDetail, Integer> hashMap = new HashMap<>();
+        details.forEach(i-> hashMap.put(i, 0));
+        return hashMap;
     }
 }
 

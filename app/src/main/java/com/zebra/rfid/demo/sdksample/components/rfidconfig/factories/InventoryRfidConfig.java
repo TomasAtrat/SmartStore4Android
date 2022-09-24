@@ -45,7 +45,7 @@ public class InventoryRfidConfig implements RfidConfigFactory{
     public Antennas.SingulationControl createSingulationControl() throws InvalidUsageException, OperationFailureException {
         Log.d(TAG, "Creating singulationControl");
         Antennas.SingulationControl s1_singulationControl = reader.Config.Antennas.getSingulationControl(1);
-        s1_singulationControl.setSession(SESSION.SESSION_S0);
+        s1_singulationControl.setSession(SESSION.SESSION_S2);
         s1_singulationControl.Action.setInventoryState(INVENTORY_STATE.INVENTORY_STATE_A);
         s1_singulationControl.Action.setSLFlag(SL_FLAG.SL_ALL);
         return s1_singulationControl;

@@ -162,7 +162,7 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
                 if (!reader.isConnected()) {
                     reader.connect();
                     ConfigureReader();
-                    return "Connected";
+                    return "Conectado";
                 }
             } catch (InvalidUsageException e) {
                 e.printStackTrace();
@@ -170,7 +170,7 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
                 e.printStackTrace();
                 Log.d(TAG, "OperationFailureException " + e.getVendorMessage());
                 String des = e.getResults().toString();
-                return "Connection failed " + des;
+                return "Conexión fallida: " + des;
             }
         }
         return "";
