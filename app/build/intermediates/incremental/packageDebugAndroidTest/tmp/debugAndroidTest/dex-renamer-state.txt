@@ -1,0 +1,4 @@
+#Tue Sep 20 18:01:30 UYT 2022
+base.0=C\:\\Zebra RFID SDK\\Zebra_RFIDAPI3_SDK_2.0.2.100\\SDKSample\\app\\build\\intermediates\\transforms\\dexMerger\\androidTest\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

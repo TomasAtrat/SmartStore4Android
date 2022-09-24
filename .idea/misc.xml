@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_inventory_selection.xml" value="0.22" />
+        <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_menu.xml" value="0.25" />
+        <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_perform_inventory.xml" value="0.25" />
+        <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/content_main.xml" value="0.18645833333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

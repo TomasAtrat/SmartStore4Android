@@ -1,0 +1,360 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\128336086f612249bf0396bf0580c1a0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\edaad4c2412344baa73e41fb5b01bd4d\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\750a400a63179322e56f375089f06ffb\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c874cafec9b42d601726fa4854afc21d\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\15a38d5d195d54c72d9cb4d2b05cdfc1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\877110e9c615d0a169e86ea66f31788f\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\a2de975160a5dee0892607b509d05fe2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\07fdba8b790a1e84f0af160cddb9a086\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\f18f3f411d4f338fdfca07b42863b323\AndroidManifest.xml:2:1-9:12
+MERGED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:2:1-28:12
+MERGED from [androidx.test.ext:junit:1.1.3] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\205b7f7c5863cc118e968ef693d945eb\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1979f6f44e7b952c162ce30041a85a1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\920857d66ef95ba5aacc5ccc396dd73e\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7f8d6960d5c9f93159d25acf191c9817\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1502ccd7fa8e8adf1a605906feae6551\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1fc7711d8af7b0227806ae1569104b7\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ef34b8b76d1d131f12454419f8488888\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1a0f9f5906c2f694618d4b4697fc2154\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.2.3] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7b4b8794b07ac07a3fed11ee956257ae\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ec288dce97238229ea154527d4314c84\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\5f79a5e4a540d8f2dfb94a224de28e99\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\370be0209c079e5f12b4bb9121d21688\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\3f8cade89a54b7d5f8b5bf031727038c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c55ca12a2b29ba6739a914e547aa0787\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\3a17761bf0e9a4fa522eaf2e4450dc0c\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\a29e545ec9a3d5ad49b98e75c704a8ff\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1a5cae9cecaed0514c420412f8b4b486\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\778925f5f0df9a73980c168bb72ae5b4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\5084c1084b5f4e8e6cade4081c0fc4a3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\f143ab36df4491b29e087387d24bd792\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\59c8ff572674b59474e0ef51eccab075\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\4e09e596e1cd7efc59dcdc0a6fffe29f\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c2f7bd79a98c2de17a83a5568cc4ded5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ee7af7c572bc0c517a470d18756d5398\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\5bcf9c9048426ccdf1bc6f2d1d121cb0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\20fc6bf2675877f7e0f46c095a33ba72\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\406cfd92c2d1a30fd4af056455c47016\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\a51729daa78977b4eb85e680ff78bd70\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\3682873e10cf61d2a23f3d289ccc8b94\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1b72c843e07227d55cc510f95cc6ea80\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7c5e2e6178d109fe857930083f8c3a65\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\4279f819e191dfe27062e068eaceff41\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\73191dab492b006573f4050ee45ec8f2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:17:1-53:12
+MERGED from [androidx.test:monitor:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\4b4144f3b381cb9425eb0539ba36e36e\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\34808071fdd68504fbbf319fae1da163\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\fe33b7a03df4c971789b30abc909bff3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\fab5de2a105f197ae3eb084e966349af\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\049c3c3836f5d5889e56420b11ea929d\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7f0a672cebf9f9da21cd9721820722d6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\56e2c546b5720eae60490f070b2cf3ee\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c605727f69eacf4192919abc4fae5fb8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\d1ae094763a0898e67397bb9a21570cd\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\5385af13f06a6d2a23ae68f7f3d1539c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\70b1befbbcfedb167d4a78147b8bd1c2\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
+	package
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:4:5-44
+		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
+		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
+		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:6:5-67
+MERGED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:18:5-67
+MERGED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:18:5-67
+	android:name
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:6:22-64
+application
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:8:5-36:19
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\edaad4c2412344baa73e41fb5b01bd4d\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\edaad4c2412344baa73e41fb5b01bd4d\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\750a400a63179322e56f375089f06ffb\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\750a400a63179322e56f375089f06ffb\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\f18f3f411d4f338fdfca07b42863b323\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\f18f3f411d4f338fdfca07b42863b323\AndroidManifest.xml:7:5-20
+MERGED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:24:5-26:44
+MERGED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:24:5-26:44
+MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\920857d66ef95ba5aacc5ccc396dd73e\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\920857d66ef95ba5aacc5ccc396dd73e\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7f8d6960d5c9f93159d25acf191c9817\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7f8d6960d5c9f93159d25acf191c9817\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1502ccd7fa8e8adf1a605906feae6551\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1502ccd7fa8e8adf1a605906feae6551\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1fc7711d8af7b0227806ae1569104b7\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1fc7711d8af7b0227806ae1569104b7\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\406cfd92c2d1a30fd4af056455c47016\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\406cfd92c2d1a30fd4af056455c47016\AndroidManifest.xml:24:5-89
+MERGED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:26:5-51:19
+MERGED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:26:5-51:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\34808071fdd68504fbbf319fae1da163\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\34808071fdd68504fbbf319fae1da163\AndroidManifest.xml:24:5-25:19
+	android:supportsRtl
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:12:9-41
+	android:appComponentFactory
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:10:9-77
+	android:roundIcon
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:13:9-54
+	android:icon
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:15:9-40
+activity#com.zebra.rfid.demo.sdksample.views.inventory.PerformInventoryActivity
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:16:9-18:39
+	android:exported
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:18:13-36
+	android:name
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:17:13-69
+activity#com.zebra.rfid.demo.sdksample.views.inventory.InventorySelectionActivity
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:19:9-21:39
+	android:exported
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:21:13-36
+	android:name
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:20:13-71
+activity#com.zebra.rfid.demo.sdksample.views.MenuActivity
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:22:9-24:39
+	android:exported
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:24:13-36
+	android:name
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:23:13-47
+activity#com.zebra.rfid.demo.sdksample.views.MainActivity
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:25:9-35:20
+	android:screenOrientation
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:28:13-49
+	android:label
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:27:13-45
+	android:theme
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:29:13-56
+	android:name
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:26:13-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:30:13-34:29
+action#android.intent.action.MAIN
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:31:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:33:17-77
+	android:name
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:33:27-74
+uses-sdk
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\128336086f612249bf0396bf0580c1a0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\128336086f612249bf0396bf0580c1a0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\edaad4c2412344baa73e41fb5b01bd4d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\edaad4c2412344baa73e41fb5b01bd4d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\750a400a63179322e56f375089f06ffb\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\750a400a63179322e56f375089f06ffb\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c874cafec9b42d601726fa4854afc21d\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c874cafec9b42d601726fa4854afc21d\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\15a38d5d195d54c72d9cb4d2b05cdfc1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\15a38d5d195d54c72d9cb4d2b05cdfc1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\877110e9c615d0a169e86ea66f31788f\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\877110e9c615d0a169e86ea66f31788f\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\a2de975160a5dee0892607b509d05fe2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\a2de975160a5dee0892607b509d05fe2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\07fdba8b790a1e84f0af160cddb9a086\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\07fdba8b790a1e84f0af160cddb9a086\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\f18f3f411d4f338fdfca07b42863b323\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\f18f3f411d4f338fdfca07b42863b323\AndroidManifest.xml:5:5-44
+MERGED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:7:5-9:41
+MERGED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.test.ext:junit:1.1.3] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\205b7f7c5863cc118e968ef693d945eb\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test.ext:junit:1.1.3] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\205b7f7c5863cc118e968ef693d945eb\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1979f6f44e7b952c162ce30041a85a1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1979f6f44e7b952c162ce30041a85a1\AndroidManifest.xml:5:5-43
+MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\920857d66ef95ba5aacc5ccc396dd73e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\920857d66ef95ba5aacc5ccc396dd73e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7f8d6960d5c9f93159d25acf191c9817\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7f8d6960d5c9f93159d25acf191c9817\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1502ccd7fa8e8adf1a605906feae6551\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1502ccd7fa8e8adf1a605906feae6551\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1fc7711d8af7b0227806ae1569104b7\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1fc7711d8af7b0227806ae1569104b7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ef34b8b76d1d131f12454419f8488888\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ef34b8b76d1d131f12454419f8488888\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1a0f9f5906c2f694618d4b4697fc2154\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1a0f9f5906c2f694618d4b4697fc2154\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.3] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7b4b8794b07ac07a3fed11ee956257ae\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.3] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7b4b8794b07ac07a3fed11ee956257ae\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ec288dce97238229ea154527d4314c84\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ec288dce97238229ea154527d4314c84\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\5f79a5e4a540d8f2dfb94a224de28e99\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\5f79a5e4a540d8f2dfb94a224de28e99\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\370be0209c079e5f12b4bb9121d21688\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\370be0209c079e5f12b4bb9121d21688\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\3f8cade89a54b7d5f8b5bf031727038c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\3f8cade89a54b7d5f8b5bf031727038c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c55ca12a2b29ba6739a914e547aa0787\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c55ca12a2b29ba6739a914e547aa0787\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\3a17761bf0e9a4fa522eaf2e4450dc0c\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\3a17761bf0e9a4fa522eaf2e4450dc0c\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\a29e545ec9a3d5ad49b98e75c704a8ff\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\a29e545ec9a3d5ad49b98e75c704a8ff\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1a5cae9cecaed0514c420412f8b4b486\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1a5cae9cecaed0514c420412f8b4b486\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\778925f5f0df9a73980c168bb72ae5b4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\778925f5f0df9a73980c168bb72ae5b4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\5084c1084b5f4e8e6cade4081c0fc4a3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\5084c1084b5f4e8e6cade4081c0fc4a3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\f143ab36df4491b29e087387d24bd792\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\f143ab36df4491b29e087387d24bd792\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\59c8ff572674b59474e0ef51eccab075\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\59c8ff572674b59474e0ef51eccab075\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\4e09e596e1cd7efc59dcdc0a6fffe29f\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\4e09e596e1cd7efc59dcdc0a6fffe29f\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c2f7bd79a98c2de17a83a5568cc4ded5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c2f7bd79a98c2de17a83a5568cc4ded5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ee7af7c572bc0c517a470d18756d5398\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ee7af7c572bc0c517a470d18756d5398\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\5bcf9c9048426ccdf1bc6f2d1d121cb0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\5bcf9c9048426ccdf1bc6f2d1d121cb0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\20fc6bf2675877f7e0f46c095a33ba72\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\20fc6bf2675877f7e0f46c095a33ba72\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\406cfd92c2d1a30fd4af056455c47016\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\406cfd92c2d1a30fd4af056455c47016\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\a51729daa78977b4eb85e680ff78bd70\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\a51729daa78977b4eb85e680ff78bd70\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\3682873e10cf61d2a23f3d289ccc8b94\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\3682873e10cf61d2a23f3d289ccc8b94\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1b72c843e07227d55cc510f95cc6ea80\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1b72c843e07227d55cc510f95cc6ea80\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7c5e2e6178d109fe857930083f8c3a65\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7c5e2e6178d109fe857930083f8c3a65\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\4279f819e191dfe27062e068eaceff41\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\4279f819e191dfe27062e068eaceff41\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\73191dab492b006573f4050ee45ec8f2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\73191dab492b006573f4050ee45ec8f2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test:monitor:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\4b4144f3b381cb9425eb0539ba36e36e\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test:monitor:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\4b4144f3b381cb9425eb0539ba36e36e\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\34808071fdd68504fbbf319fae1da163\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\34808071fdd68504fbbf319fae1da163\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\fe33b7a03df4c971789b30abc909bff3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\fe33b7a03df4c971789b30abc909bff3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\fab5de2a105f197ae3eb084e966349af\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\fab5de2a105f197ae3eb084e966349af\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\049c3c3836f5d5889e56420b11ea929d\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\049c3c3836f5d5889e56420b11ea929d\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7f0a672cebf9f9da21cd9721820722d6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7f0a672cebf9f9da21cd9721820722d6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\56e2c546b5720eae60490f070b2cf3ee\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\56e2c546b5720eae60490f070b2cf3ee\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c605727f69eacf4192919abc4fae5fb8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c605727f69eacf4192919abc4fae5fb8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\d1ae094763a0898e67397bb9a21570cd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\d1ae094763a0898e67397bb9a21570cd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\5385af13f06a6d2a23ae68f7f3d1539c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\5385af13f06a6d2a23ae68f7f3d1539c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\70b1befbbcfedb167d4a78147b8bd1c2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\70b1befbbcfedb167d4a78147b8bd1c2\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.BLUETOOTH
+ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:11:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:12:5-74
+	android:name
+		ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:12:22-71
+uses-permission#android.permission.BLUETOOTH_PRIVILEGED
+ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:13:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:14:22-78
+uses-feature#android.hardware.usb.host
+ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:16:5-62
+	android:name
+		ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:16:19-59
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:19:5-21:38
+	android:maxSdkVersion
+		ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:21:9-35
+	android:name
+		ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:20:9-64
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:22:22-76
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\920857d66ef95ba5aacc5ccc396dd73e\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\920857d66ef95ba5aacc5ccc396dd73e\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\920857d66ef95ba5aacc5ccc396dd73e\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\920857d66ef95ba5aacc5ccc396dd73e\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1fc7711d8af7b0227806ae1569104b7\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1fc7711d8af7b0227806ae1569104b7\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1fc7711d8af7b0227806ae1569104b7\AndroidManifest.xml:24:13-58
+uses-permission#android.permission.REORDER_TASKS
+ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:24:5-72
+	android:name
+		ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:24:22-69
+activity#androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity
+ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:27:9-34:20
+	android:exported
+		ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:29:13-36
+	android:theme
+		ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:30:13-49
+	android:name
+		ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:28:13-99
+intent-filter#action:name:android.intent.action.MAIN
+ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:31:13-33:29
+activity#androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:35:9-42:20
+	android:exported
+		ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:37:13-36
+	android:theme
+		ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:38:13-49
+	android:name
+		ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:36:13-95
+activity#androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity
+ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:43:9-50:20
+	android:exported
+		ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:45:13-36
+	android:theme
+		ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:46:13-56
+	android:name
+		ADDED from [androidx.test:core:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\ab798be2c7f300be5470d8231bcd0718\AndroidManifest.xml:44:13-103
