@@ -2,6 +2,7 @@ package com.zebra.rfid.demo.sdksample.services;
 
 import static com.zebra.rfid.demo.sdksample.utils.Constants.ADD_INVENTORY_DETAILS_SERVICE;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.API_URL;
+import static com.zebra.rfid.demo.sdksample.utils.Constants.ERP_URL;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.GET_INVENTORY_DETAILS_SERVICE;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.INVENTORY_SERVICE;
 import static com.zebra.rfid.demo.sdksample.views.inventory.PerformInventoryActivity.counterByBarcode;
@@ -115,11 +116,33 @@ public class InventoryService {
                     inventoryDetails,
                     problems);
 
+            this.informToERP(inventoryData);
+
             this.sendInventory(inventoryData);
 
         } catch (Exception e) {
             Log.e(TAG, e.getMessage());
         }
+    }
+
+    private void informToERP(InventoryData inventoryData) throws JSONException {
+        final String mURL = ERP_URL + ADD_INVENTORY_DETAILS_SERVICE;
+
+        Gson gson = new GsonBuilder()
+                .setDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz").create();
+
+        Log.d(TAG, "Gson: " + gson.toJson(inventoryData));
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST,
+                mURL,
+                new JSONObject(gson.toJson(inventoryData)),
+                null,
+                error -> {
+            Log.e(TAG, error.getMessage());
+            Toast.makeText(context, "Se produjo un error al envíar los datos al servidor", Toast.LENGTH_SHORT).show();
+        });
+
+        VolleyRequest.getInstance(context).addToRequestQueue(request);
     }
 
     private List<InventoryProblem> getInventoryProblemsIfAny(List<InventoryDetail> inventoryDetails) {

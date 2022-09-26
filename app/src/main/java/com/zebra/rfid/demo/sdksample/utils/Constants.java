@@ -8,5 +8,8 @@ public class Constants {
     public static final String ADD_INVENTORY_DETAILS_SERVICE = "/api/v1/inventories/";
 
 
+    public static final String ERP_URL = "";
+
+
     public static final String INVENTORY_OBJ = "InventoryObj";
 }
