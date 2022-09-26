@@ -27,36 +27,52 @@
     <ListView
         android:id="@+id/detailsList"
         android:layout_width="0dp"
-        android:layout_height="521dp"
+        android:layout_height="478dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/saveInventory"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inventoryNumber"
-        app:layout_constraintVertical_bias="0.737" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/readerStatusLabel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:text="@string/ReaderStatus"
         app:layout_constraintBottom_toTopOf="@+id/detailsList"
         app:layout_constraintEnd_toStartOf="@+id/readerStatus"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inventoryNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/inventoryNumber"
+        app:layout_constraintVertical_bias="0.354" />
 
     <TextView
         android:id="@+id/readerStatus"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:text="Status"
         app:layout_constraintBottom_toTopOf="@+id/detailsList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/readerStatusLabel"
-        app:layout_constraintTop_toBottomOf="@+id/inventoryNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/inventoryNumber"
+        app:layout_constraintVertical_bias="0.354" />
+
+    <Button
+        android:id="@+id/saveInventory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="Guardar inventario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

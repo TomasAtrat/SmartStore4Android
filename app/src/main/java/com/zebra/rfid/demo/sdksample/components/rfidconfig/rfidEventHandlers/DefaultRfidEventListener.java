@@ -40,9 +40,8 @@ public class DefaultRfidEventListener implements RfidEventsListener {
                     Log.d(TAG, "Tag relative distance " + dist);
                 }
             }
-            // possibly if operation was invoked from async task and still busy
-            // handle tag data responses on parallel thread thus THREAD_POOL_EXECUTOR
-            new AsyncDataUpdate().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, myTags);
+
+            new AsyncDataUpdate(responseHandlerInterface).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, myTags);
         }
     }
 
@@ -50,14 +49,4 @@ public class DefaultRfidEventListener implements RfidEventsListener {
     public void eventStatusNotify(RfidStatusEvents rfidStatusEvents) {
 
     }
-
-
-    public class AsyncDataUpdate extends AsyncTask<TagData[], Void, Void> {
-        @Override
-        protected Void doInBackground(TagData[]... params) {
-            responseHandlerInterface.handleTagdata(params[0]);
-            return null;
-        }
-    }
-
 }

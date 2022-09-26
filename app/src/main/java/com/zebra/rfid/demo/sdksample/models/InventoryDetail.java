@@ -2,9 +2,10 @@ package com.zebra.rfid.demo.sdksample.models;
 
 import androidx.annotation.Nullable;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class InventoryDetail {
+public class InventoryDetail implements Serializable {
     private Long id;
     private Integer supposedQty;
     private Integer readQty;

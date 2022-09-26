@@ -7,20 +7,26 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.zebra.rfid.api3.Antennas;
+import com.zebra.rfid.api3.Antennas.RFMode;
+import com.zebra.rfid.api3.DYNAMIC_POWER_OPTIMIZATION;
 import com.zebra.rfid.api3.ENUM_TRANSPORT;
 import com.zebra.rfid.api3.ENUM_TRIGGER_MODE;
 import com.zebra.rfid.api3.INVENTORY_STATE;
 import com.zebra.rfid.api3.InvalidUsageException;
 import com.zebra.rfid.api3.OperationFailureException;
 import com.zebra.rfid.api3.RFIDReader;
+import com.zebra.rfid.api3.RFID_EVENT_TYPE;
+import com.zebra.rfid.api3.RFModes;
 import com.zebra.rfid.api3.ReaderDevice;
 import com.zebra.rfid.api3.Readers;
 import com.zebra.rfid.api3.RfidEventsListener;
+import com.zebra.rfid.api3.SCAN_BATCH_MODE;
 import com.zebra.rfid.api3.SESSION;
 import com.zebra.rfid.api3.SL_FLAG;
 import com.zebra.rfid.api3.START_TRIGGER_TYPE;
 import com.zebra.rfid.api3.STOP_TRIGGER_TYPE;
 import com.zebra.rfid.api3.TriggerInfo;
+import com.zebra.rfid.demo.sdksample.components.rfidconfig.actionStrategies.RfidActionStrategy;
 import com.zebra.rfid.demo.sdksample.components.rfidconfig.factories.RfidConfigFactory;
 import com.zebra.rfid.demo.sdksample.components.rfidconfig.factories.RfidFactory;
 import com.zebra.rfid.demo.sdksample.components.rfidconfig.rfidEventHandlers.ResponseHandlerInterface;
@@ -41,6 +47,7 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
     private ResponseHandlerInterface responseHandlerInterface;
     private RfidUseCase useCase;
     private AppCompatActivity context;
+    private RfidActionStrategy actionStrategy;
 
     private int MAX_POWER = 270;
     String readername = "RFD8500123";
@@ -57,57 +64,6 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
 
         InitSDK();
     }
-
-    //region TO_DELETE
-
-    public String Test2() {
-        // check reader connection
-        if (!isReaderConnected())
-            return "Not connected";
-        // Set the singulation control to S2 which will read each tag once only
-        try {
-            Antennas.SingulationControl s1_singulationControl = reader.Config.Antennas.getSingulationControl(1);
-            s1_singulationControl.setSession(SESSION.SESSION_S2);
-            s1_singulationControl.Action.setInventoryState(INVENTORY_STATE.INVENTORY_STATE_A);
-            s1_singulationControl.Action.setSLFlag(SL_FLAG.SL_ALL);
-            reader.Config.Antennas.setSingulationControl(1, s1_singulationControl);
-        } catch (InvalidUsageException e) {
-            e.printStackTrace();
-        } catch (OperationFailureException e) {
-            e.printStackTrace();
-            return e.getResults().toString() + " " + e.getVendorMessage();
-        }
-        return "Session set to S2";
-    }
-
-    public String Defaults() {
-        // check reader connection
-        if (!isReaderConnected())
-            return "Not connected";;
-        try {
-            // Power to 270
-            Antennas.AntennaRfConfig config = null;
-            config = reader.Config.Antennas.getAntennaRfConfig(1);
-            config.setTransmitPowerIndex(MAX_POWER);
-            config.setrfModeTableIndex(0);
-            config.setTari(0);
-            reader.Config.Antennas.setAntennaRfConfig(1, config);
-            // singulation to S0
-            Antennas.SingulationControl s1_singulationControl = reader.Config.Antennas.getSingulationControl(1);
-            s1_singulationControl.setSession(SESSION.SESSION_S0);
-            s1_singulationControl.Action.setInventoryState(INVENTORY_STATE.INVENTORY_STATE_A);
-            s1_singulationControl.Action.setSLFlag(SL_FLAG.SL_ALL);
-            reader.Config.Antennas.setSingulationControl(1, s1_singulationControl);
-        } catch (InvalidUsageException e) {
-            e.printStackTrace();
-        } catch (OperationFailureException e) {
-            e.printStackTrace();
-            return e.getResults().toString() + " " + e.getVendorMessage();
-        }
-        return "Default settings applied";
-    }
-
-    //endregion
 
     private boolean isReaderConnected() {
         if (reader != null && reader.isConnected())
@@ -149,7 +105,7 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
                         }
                     }
                 }
-            }catch (InvalidUsageException ie) {
+            } catch (InvalidUsageException ie) {
                 ie.printStackTrace();
             }
         }
@@ -182,11 +138,14 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
             TriggerInfo triggerInfo = new TriggerInfo();
             triggerInfo.StartTrigger.setTriggerType(START_TRIGGER_TYPE.START_TRIGGER_TYPE_IMMEDIATE);
             triggerInfo.StopTrigger.setTriggerType(STOP_TRIGGER_TYPE.STOP_TRIGGER_TYPE_IMMEDIATE);
+
             try {
                 // receive events from reader
                 RfidConfigFactory rfidConfigFactory = RfidFactory.getRfidConfigFactory(useCase, reader, responseHandlerInterface);
                 if (eventHandler == null)
                     eventHandler = rfidConfigFactory.createEventHandler();
+
+                actionStrategy = rfidConfigFactory.createRfidActionStrategy();
 
                 reader.Events.addEventsListener(eventHandler);
 
@@ -200,6 +159,7 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
 
                 reader.Config.setStartTrigger(triggerInfo.StartTrigger);
                 reader.Config.setStopTrigger(triggerInfo.StopTrigger);
+
 
                 MAX_POWER = reader.ReaderCapabilities.getTransmitPowerLevelValues().length - 1;
 
@@ -251,21 +211,21 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
         }
     }
 
-    public synchronized void performInventory() {
+    public synchronized void executeRfidAction() {
         if (!isReaderConnected())
             return;
         try {
-            reader.Actions.Inventory.perform();
+            this.actionStrategy.performRfidAction();
         } catch (InvalidUsageException | OperationFailureException e) {
             e.printStackTrace();
         }
     }
 
-    public synchronized void stopInventory() {
+    public synchronized void stopRfidAction() {
         if (!isReaderConnected())
             return;
         try {
-            reader.Actions.Inventory.stop();
+            this.actionStrategy.stopRfidAction();
         } catch (InvalidUsageException | OperationFailureException e) {
             e.printStackTrace();
         }

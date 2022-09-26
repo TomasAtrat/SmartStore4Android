@@ -18,7 +18,7 @@ import org.json.JSONObject;
 
 public class AuthService {
 
-    private static UserInfo userInfo;
+    public static UserInfo userInfo;
     private static String TAG = "AuthService";
     private Context context;
 

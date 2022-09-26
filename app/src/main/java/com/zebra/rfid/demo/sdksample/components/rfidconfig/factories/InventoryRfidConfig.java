@@ -10,10 +10,12 @@ import com.zebra.rfid.api3.RFIDReader;
 import com.zebra.rfid.api3.RfidEventsListener;
 import com.zebra.rfid.api3.SESSION;
 import com.zebra.rfid.api3.SL_FLAG;
+import com.zebra.rfid.demo.sdksample.components.rfidconfig.actionStrategies.InventoryRfidActionStrategy;
+import com.zebra.rfid.demo.sdksample.components.rfidconfig.actionStrategies.RfidActionStrategy;
 import com.zebra.rfid.demo.sdksample.components.rfidconfig.rfidEventHandlers.ResponseHandlerInterface;
 import com.zebra.rfid.demo.sdksample.components.rfidconfig.rfidEventHandlers.InventoryEventHandler;
 
-public class InventoryRfidConfig implements RfidConfigFactory{
+public class InventoryRfidConfig implements RfidConfigFactory {
     private static final int MAX_POWER = 270;
     private static final String TAG = "InventoryRfidConfig";
 
@@ -43,11 +45,16 @@ public class InventoryRfidConfig implements RfidConfigFactory{
 
     @Override
     public Antennas.SingulationControl createSingulationControl() throws InvalidUsageException, OperationFailureException {
-        Log.d(TAG, "Creating singulationControl");
         Antennas.SingulationControl s1_singulationControl = reader.Config.Antennas.getSingulationControl(1);
         s1_singulationControl.setSession(SESSION.SESSION_S2);
+        s1_singulationControl.setTagTransitTime((short)60);
         s1_singulationControl.Action.setInventoryState(INVENTORY_STATE.INVENTORY_STATE_A);
         s1_singulationControl.Action.setSLFlag(SL_FLAG.SL_ALL);
         return s1_singulationControl;
+    }
+
+    @Override
+    public RfidActionStrategy createRfidActionStrategy() {
+        return new InventoryRfidActionStrategy(reader);
     }
 }
