@@ -9,10 +9,11 @@ public class RfidFactory {
                                                          RFIDReader reader,
                                                          ResponseHandlerInterface responseHandlerInterface){
         switch (useCase){
-            case INVENTORY:
-                return new InventoryRfidConfig(reader, responseHandlerInterface);
-            default:
-                return null;
+            case INVENTORY:return new InventoryRfidConfig(reader, responseHandlerInterface);
+
+            case SEARCH_ITEM: return new LocationRfidConfig(reader, responseHandlerInterface);
+
+            default: return null;
         }
     }
 }

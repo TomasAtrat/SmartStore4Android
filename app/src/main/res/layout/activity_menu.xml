@@ -43,6 +43,12 @@
             android:text="@string/reception_intent" />
 
         <Button
+            android:id="@+id/locateItemBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/locate_item_intent" />
+
+        <Button
             android:id="@+id/inventoryBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

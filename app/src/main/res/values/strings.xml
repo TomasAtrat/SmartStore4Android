@@ -6,10 +6,14 @@
     <string name="username_field">Nombre de usuario</string>
     <string name="password_field">Contraseña</string>
     <string name="inventory_intent">Inventario</string>
+    <string name="locate_item_intent">Localizar ítem</string>
     <string name="reception_intent">Recepción</string>
     <string name="logout_intent">Cerrar sesión</string>
     <string name="selectInventoryTitle">Seleccionar inventario</string>
+    <string name="selectReceptionBtn">Seleccionar referencia</string>
     <string name="selectInventoryBtn">Seleccionar inventario</string>
+    <string name="selectReceptionTitle">Seleccionar referencia</string>
     <string name="Inventory">Inventario #</string>
+    <string name="Reception">Referencia #</string>
     <string name="ReaderStatus">Estado del lector :</string>
 </resources>

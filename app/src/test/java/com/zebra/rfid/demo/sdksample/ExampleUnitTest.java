@@ -4,8 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-import com.zebra.rfid.demo.sdksample.services.EPCEncoder;
-
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
@@ -17,9 +15,5 @@ public class ExampleUnitTest {
         assertEquals(4, 2 + 2);
     }
 
-    @Test
-    public void doSth() {
-       new EPCEncoder().doSth();
-       assertEquals(true, true);
-    }
+
 }
