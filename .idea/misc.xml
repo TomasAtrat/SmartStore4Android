@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_inventory_selection.xml" value="0.1324200913242009" />
-        <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_item_selection.xml" value="0.25" />
+        <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_item_selection.xml" value="0.22" />
         <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_menu.xml" value="0.25" />
+        <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_order.xml" value="0.18" />
+        <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_order_step_two.xml" value="0.18645833333333334" />
         <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_perform_inventory.xml" value="0.12719298245614036" />
+        <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_reception.xml" value="0.18" />
         <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/activity_reception_selection.xml" value="0.15591397849462366" />
         <entry key="..\:/Zebra RFID SDK/Zebra_RFIDAPI3_SDK_2.0.2.100/SDKSample/app/src/main/res/layout/content_main.xml" value="0.18645833333333334" />
       </map>

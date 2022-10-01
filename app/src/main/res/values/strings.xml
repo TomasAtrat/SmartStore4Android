@@ -2,6 +2,7 @@
     <string name="app_name">SmartStore</string>
     <string name="action_settings">Settings</string>
     <string name="login_title">SmartStore</string>
+    <string name="createOrderTitle">Crear pedido</string>
     <string name="login_btn">Iniciar sesión</string>
     <string name="username_field">Nombre de usuario</string>
     <string name="password_field">Contraseña</string>
@@ -16,4 +17,14 @@
     <string name="Inventory">Inventario #</string>
     <string name="Reception">Referencia #</string>
     <string name="ReaderStatus">Estado del lector :</string>
+
+
+    <string name="ContinueButton">Continuar</string>
+    <string name="AcceptButton">Aceptar</string>
+    <string name="CancelButton">Cancelar</string>
+    
+    
+    <string name="ContactoRequerido">Se requiere especificar al menos un método de contacto con el cliente</string>
+    <string name="RequiredMsg">%s es un campo requerido</string>
+    
 </resources>

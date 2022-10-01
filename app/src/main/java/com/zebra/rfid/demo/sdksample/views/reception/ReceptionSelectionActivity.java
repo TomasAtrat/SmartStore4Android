@@ -1,7 +1,10 @@
 package com.zebra.rfid.demo.sdksample.views.reception;
 
+import static com.zebra.rfid.demo.sdksample.utils.Constants.RECEPTION_OBJ;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -49,8 +52,8 @@ public class ReceptionSelectionActivity extends AppCompatActivity {
         ReceptionList reception = (ReceptionList) this.receptionSpinner.getSelectedItem();
         Log.d(TAG, "selected reference: " + reception.getDescription());
 
-//        Intent intent = new Intent(this, PerformInventoryActivity.class);
-//        intent.putExtra(INVENTORY_OBJ, inventory);
-//        startActivity(intent);
+        Intent intent = new Intent(this, ReceptionActivity.class);
+        intent.putExtra(RECEPTION_OBJ, reception);
+        startActivity(intent);
     }
 }

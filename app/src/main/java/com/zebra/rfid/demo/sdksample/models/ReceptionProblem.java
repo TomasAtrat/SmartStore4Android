@@ -17,6 +17,14 @@ public class ReceptionProblem implements Serializable {
         return id;
     }
 
+    public ReceptionProblem(String productCode, Integer difference, String description, Boolean accepted, ReceptionDetail detail) {
+        this.productCode = productCode;
+        this.difference = difference;
+        this.description = description;
+        this.accepted = accepted;
+        this.detail = detail;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }

@@ -160,6 +160,7 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
                 reader.Config.setStartTrigger(triggerInfo.StartTrigger);
                 reader.Config.setStopTrigger(triggerInfo.StopTrigger);
 
+                reader.Config.setUniqueTagReport(true);
 
                 MAX_POWER = reader.ReaderCapabilities.getTransmitPowerLevelValues().length - 1;
 

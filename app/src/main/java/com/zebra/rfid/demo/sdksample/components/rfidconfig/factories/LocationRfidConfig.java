@@ -6,17 +6,22 @@ import com.zebra.rfid.api3.OperationFailureException;
 import com.zebra.rfid.api3.RFIDReader;
 import com.zebra.rfid.api3.RfidEventsListener;
 import com.zebra.rfid.demo.sdksample.components.rfidconfig.actionStrategies.RfidActionStrategy;
+import com.zebra.rfid.demo.sdksample.components.rfidconfig.rfidEventHandlers.LocationEventHandler;
 import com.zebra.rfid.demo.sdksample.components.rfidconfig.rfidEventHandlers.ResponseHandlerInterface;
 
 public class LocationRfidConfig implements RfidConfigFactory{
 
-    public LocationRfidConfig(RFIDReader reader, ResponseHandlerInterface responseHandlerInterface) {
+    private RFIDReader reader;
+    private ResponseHandlerInterface responseHandlerInterface;
 
+    public LocationRfidConfig(RFIDReader reader, ResponseHandlerInterface responseHandlerInterface) {
+        this.reader = reader;
+        this.responseHandlerInterface = responseHandlerInterface;
     }
 
     @Override
     public RfidEventsListener createEventHandler() {
-        return null;
+        return new LocationEventHandler(reader, responseHandlerInterface);
     }
 
     @Override

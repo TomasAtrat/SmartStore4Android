@@ -7,13 +7,17 @@ import com.zebra.rfid.demo.sdksample.components.rfidconfig.RfidUseCase;
 public class RfidFactory {
     public static RfidConfigFactory getRfidConfigFactory(RfidUseCase useCase,
                                                          RFIDReader reader,
-                                                         ResponseHandlerInterface responseHandlerInterface){
-        switch (useCase){
-            case INVENTORY:return new InventoryRfidConfig(reader, responseHandlerInterface);
+                                                         ResponseHandlerInterface responseHandlerInterface) {
+        switch (useCase) {
+            case RECEPTION:
+            case INVENTORY:
+                return new InventoryRfidConfig(reader, responseHandlerInterface);
 
-            case SEARCH_ITEM: return new LocationRfidConfig(reader, responseHandlerInterface);
+            case SEARCH_ITEM:
+                return new LocationRfidConfig(reader, responseHandlerInterface);
 
-            default: return null;
+            default:
+                return null;
         }
     }
 }

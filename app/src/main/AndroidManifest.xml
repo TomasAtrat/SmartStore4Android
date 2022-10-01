@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".views.order.OrderActivity"
+            android:exported="true" />
+        <activity
             android:name=".views.reception.ReceptionActivity"
             android:exported="true" />
         <activity

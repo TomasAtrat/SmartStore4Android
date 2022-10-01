@@ -4,21 +4,19 @@ import com.zebra.rfid.api3.InvalidUsageException;
 import com.zebra.rfid.api3.OperationFailureException;
 import com.zebra.rfid.api3.RFIDReader;
 
-public class InventoryRfidActionStrategy implements RfidActionStrategy {
-
+public class ItemLocationRfidActionStrategy implements RfidActionStrategy{
     private RFIDReader reader;
 
-    public InventoryRfidActionStrategy(RFIDReader reader) {
+    public ItemLocationRfidActionStrategy(RFIDReader reader) {
         this.reader = reader;
     }
 
     public synchronized void performRfidAction() throws InvalidUsageException, OperationFailureException {
-        reader.Actions.Inventory.perform();
+        //reader.Actions.Inventory.perform();
     }
 
     @Override
     public void stopRfidAction() throws InvalidUsageException, OperationFailureException {
-        reader.Actions.Inventory.stop();
-        reader.Actions.purgeTags();
+        //reader.Actions.Inventory.stop();
     }
 }
