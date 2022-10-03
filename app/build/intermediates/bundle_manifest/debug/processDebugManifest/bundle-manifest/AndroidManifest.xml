@@ -33,6 +33,24 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.zebra.rfid.demo.sdksample.views.order.AnexosActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.zebra.rfid.demo.sdksample.views.order.OrderFormStepTwoActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.zebra.rfid.demo.sdksample.views.order.OrderActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.zebra.rfid.demo.sdksample.views.reception.ReceptionActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.zebra.rfid.demo.sdksample.views.reception.ReceptionSelectionActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.zebra.rfid.demo.sdksample.views.itemlocation.ItemSelectionActivity"
+            android:exported="true" />
+        <activity
             android:name="com.zebra.rfid.demo.sdksample.views.inventory.PerformInventoryActivity"
             android:exported="true" />
         <activity

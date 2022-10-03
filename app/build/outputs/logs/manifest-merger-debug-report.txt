@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-56:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\128336086f612249bf0396bf0580c1a0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\edaad4c2412344baa73e41fb5b01bd4d\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\750a400a63179322e56f375089f06ffb\AndroidManifest.xml:2:1-11:12
@@ -59,22 +59,22 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\d1ae094763a0898e67397bb9a21570cd\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\5385af13f06a6d2a23ae68f7f3d1539c\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\70b1befbbcfedb167d4a78147b8bd1c2\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-56:12
 	package
 		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:4:5-44
 		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
-		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-56:12
 		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
-		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-38:12
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:1-56:12
 		INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:2:11-69
@@ -85,7 +85,7 @@ MERGED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.
 	android:name
 		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:8:5-36:19
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:8:5-54:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\edaad4c2412344baa73e41fb5b01bd4d\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\edaad4c2412344baa73e41fb5b01bd4d\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\750a400a63179322e56f375089f06ffb\AndroidManifest.xml:9:5-20
@@ -122,44 +122,80 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\hy
 		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
 		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:15:9-40
-activity#com.zebra.rfid.demo.sdksample.views.inventory.PerformInventoryActivity
+activity#com.zebra.rfid.demo.sdksample.views.order.AnexosActivity
 ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:16:9-18:39
 	android:exported
 		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:18:13-36
 	android:name
-		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:17:13-69
-activity#com.zebra.rfid.demo.sdksample.views.inventory.InventorySelectionActivity
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:17:13-55
+activity#com.zebra.rfid.demo.sdksample.views.order.OrderFormStepTwoActivity
 ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:19:9-21:39
 	android:exported
 		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:21:13-36
 	android:name
-		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:20:13-71
-activity#com.zebra.rfid.demo.sdksample.views.MenuActivity
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:20:13-65
+activity#com.zebra.rfid.demo.sdksample.views.order.OrderActivity
 ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:22:9-24:39
 	android:exported
 		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:24:13-36
 	android:name
-		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:23:13-47
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:23:13-54
+activity#com.zebra.rfid.demo.sdksample.views.reception.ReceptionActivity
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:25:9-27:39
+	android:exported
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:27:13-36
+	android:name
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:26:13-62
+activity#com.zebra.rfid.demo.sdksample.views.reception.ReceptionSelectionActivity
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:28:9-30:39
+	android:exported
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:29:13-71
+activity#com.zebra.rfid.demo.sdksample.views.itemlocation.ItemSelectionActivity
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:31:9-33:39
+	android:exported
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:33:13-36
+	android:name
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:32:13-69
+activity#com.zebra.rfid.demo.sdksample.views.inventory.PerformInventoryActivity
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:34:9-36:39
+	android:exported
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:36:13-36
+	android:name
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:35:13-69
+activity#com.zebra.rfid.demo.sdksample.views.inventory.InventorySelectionActivity
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:37:9-39:39
+	android:exported
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:39:13-36
+	android:name
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:38:13-71
+activity#com.zebra.rfid.demo.sdksample.views.MenuActivity
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:40:9-42:39
+	android:exported
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:42:13-36
+	android:name
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:41:13-47
 activity#com.zebra.rfid.demo.sdksample.views.MainActivity
-ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:25:9-35:20
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:43:9-53:20
 	android:screenOrientation
-		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:28:13-49
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:46:13-49
 	android:label
-		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:27:13-45
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:45:13-45
 	android:theme
-		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:29:13-56
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:47:13-56
 	android:name
-		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:26:13-47
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:44:13-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:30:13-34:29
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:48:13-52:29
 action#android.intent.action.MAIN
-ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:31:17-69
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:49:17-69
 	android:name
-		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:31:25-66
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:49:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:33:17-77
+ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:51:17-77
 	android:name
-		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:33:27-74
+		ADDED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml:51:27-74
 uses-sdk
 INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\main\AndroidManifest.xml

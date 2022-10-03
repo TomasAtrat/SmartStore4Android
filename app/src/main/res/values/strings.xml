@@ -22,9 +22,9 @@
     <string name="ContinueButton">Continuar</string>
     <string name="AcceptButton">Aceptar</string>
     <string name="CancelButton">Cancelar</string>
-    
-    
-    <string name="ContactoRequerido">Se requiere especificar al menos un método de contacto con el cliente</string>
+    <string name="BackButton">Atrás</string>
+
+
     <string name="RequiredMsg">%s es un campo requerido</string>
-    
+
 </resources>

@@ -1,8 +1,9 @@
 package com.zebra.rfid.demo.sdksample.models;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Product {
+public class Product implements Serializable {
     private String id;
     private String description;
     private String category;

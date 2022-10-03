@@ -35,17 +35,13 @@ public class ItemSelectionActivity extends AppCompatActivity {
 
         searchItemBtn.setOnClickListener(this::searchItem);
 
-        productService = new ProductService();
-        orderService = new OrderService();
+        productService = new ProductService(this);
+        orderService = new OrderService(this);
     }
 
     private void searchItem(View view) {
         Barcode barcode = new Barcode(barcodeTxt.getText().toString());
 
         productService.getBarcodeIfHasStock(barcode);
-
-        //If theres stock then open the location activity
-
-        //else ask if want to create order
     }
 }

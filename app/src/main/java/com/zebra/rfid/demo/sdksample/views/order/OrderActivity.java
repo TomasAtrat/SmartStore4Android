@@ -1,18 +1,25 @@
 package com.zebra.rfid.demo.sdksample.views.order;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static com.zebra.rfid.demo.sdksample.utils.Constants.CUSTOMER_OBJ;
+import static com.zebra.rfid.demo.sdksample.utils.Constants.LIST_OF_STOCK_OBJ;
 
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.zebra.rfid.demo.sdksample.R;
 import com.zebra.rfid.demo.sdksample.models.Customer;
 import com.zebra.rfid.demo.sdksample.services.CustomerService;
 import com.zebra.rfid.demo.sdksample.services.OrderService;
+import com.zebra.rfid.demo.sdksample.utils.wrappers.ListOfStock;
 import com.zebra.rfid.demo.sdksample.views.itemlocation.ItemSelectionActivity;
+
+import java.util.List;
 
 public class OrderActivity extends AppCompatActivity {
 
@@ -20,6 +27,9 @@ public class OrderActivity extends AppCompatActivity {
     private Button cancelBtn, continueBtn;
     private OrderService orderService;
     private CustomerService customerService;
+
+    private Customer customer;
+    private ListOfStock listOfStock;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +39,10 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     private void instantiateVariables() {
-        this.orderService = new OrderService();
-        this.customerService = new CustomerService(this);
+        this.orderService = new OrderService(this);
+        this.customerService = new CustomerService();
+
+        listOfStock = (ListOfStock) getIntent().getSerializableExtra(LIST_OF_STOCK_OBJ);
 
         nameTxt = findViewById(R.id.nameTxt);
         lastNameTxt = findViewById(R.id.lastNameTxt);
@@ -46,17 +58,22 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     private void goToNextStepIfValid() {
-        Customer customer = new Customer(documentTxt.getText().toString(),
+        customer = new Customer(documentTxt.getText().toString(),
                 nameTxt.getText().toString(),
                 lastNameTxt.getText().toString(),
                 emailTxt.getText().toString(),
                 phoneTxt.getText().toString());
 
-        if (this.customerService.isCustomerValid(customer)){
-            //Intent intent =
+        List<String> errors = this.customerService.isCustomerValid(customer);
 
+        if (errors.size() == 0) {
+            Intent intent = new Intent(this, OrderFormStepTwoActivity.class);
+            intent.putExtra(CUSTOMER_OBJ, customer);
+            intent.putExtra(LIST_OF_STOCK_OBJ, listOfStock);
+            startActivity(intent);
+        } else {
+            errors.forEach(i -> Toast.makeText(this, i, Toast.LENGTH_LONG).show());
         }
-
 
     }
 

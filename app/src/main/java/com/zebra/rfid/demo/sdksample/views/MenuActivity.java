@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.zebra.rfid.demo.sdksample.R;
 import com.zebra.rfid.demo.sdksample.services.AuthService;
 import com.zebra.rfid.demo.sdksample.views.inventory.InventorySelectionActivity;
+import com.zebra.rfid.demo.sdksample.views.itemlocation.ItemSelectionActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -28,6 +29,10 @@ public class MenuActivity extends AppCompatActivity {
         locateItemBtn = findViewById(R.id.locateItemBtn);
         InventoryBtn = findViewById(R.id.inventoryBtn);
         LogoutBtn = findViewById(R.id.logoutBtn);
+
+        locateItemBtn.setOnClickListener(event -> {
+            goToActivity(ItemSelectionActivity.class);
+        });
 
         InventoryBtn.setOnClickListener(event -> {
             Intent intent = new Intent(this, InventorySelectionActivity.class);

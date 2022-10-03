@@ -191,6 +191,8 @@ public class InventoryService {
         Intent intent = new Intent(context, MenuActivity.class);
         context.startActivity(intent);
     }
+
+
 }
 
 

@@ -49,7 +49,7 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
     private AppCompatActivity context;
     private RfidActionStrategy actionStrategy;
 
-    private int MAX_POWER = 270;
+    private int MAX_POWER = 300;
     String readername = "RFD8500123";
 
     public void onCreate(AppCompatActivity activity,

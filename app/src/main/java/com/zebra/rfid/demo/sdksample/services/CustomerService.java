@@ -1,34 +1,33 @@
 package com.zebra.rfid.demo.sdksample.services;
 
+import static com.zebra.rfid.demo.sdksample.utils.validation.CommonValidation.isEmailValid;
 import static com.zebra.rfid.demo.sdksample.utils.validation.CommonValidation.isStringNullOrEmpty;
 
-import android.content.Context;
-import android.widget.Toast;
+import android.util.Patterns;
 
-import com.zebra.rfid.demo.sdksample.R;
 import com.zebra.rfid.demo.sdksample.models.Customer;
 
-public class CustomerService {
-    private Context context;
+import java.util.ArrayList;
+import java.util.List;
 
-    public CustomerService(Context context){
-        this.context = context;
+public class CustomerService {
+
+    public CustomerService() {
+
     }
 
-    public boolean isCustomerValid(Customer customer){
-        boolean isValid = true;
+    public List<String> isCustomerValid(Customer customer) {
+        List<String> errors = new ArrayList<>();
 
-        if(isStringNullOrEmpty(customer.getId())){
-            Toast.makeText(context, "El documento es un campo requerido", Toast.LENGTH_SHORT).show();
-            isValid = false;
-        }
+        if (isStringNullOrEmpty(customer.getId())) errors.add("El documento es un campo requerido");
 
-        if(isStringNullOrEmpty(customer.getEmail()) && isStringNullOrEmpty(customer.getPhoneNumber())){
-            Toast.makeText(context, R.string.ContactoRequerido, Toast.LENGTH_SHORT).show();
-            isValid = false;
-        }
+        if (isStringNullOrEmpty(customer.getEmail()) && isStringNullOrEmpty(customer.getPhoneNumber()))
+            errors.add("Se requiere especificar al menos un medio de contacto con el cliente");
 
-        return isValid;
+        if (!isStringNullOrEmpty(customer.getEmail()) && !isEmailValid(customer.getEmail()))
+            errors.add("El email proporcionado no es válido");
+
+        return errors;
     }
 
 }

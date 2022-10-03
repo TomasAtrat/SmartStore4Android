@@ -3,7 +3,20 @@ package com.zebra.rfid.demo.sdksample.models;
 import java.io.Serializable;
 
 public class UserInfo implements Serializable {
-    public UserInfo(Long id, int version, Boolean active, String email, String firstName, String lastName, Boolean locked, String passwordHash, String role, String username) {
+
+    private Long id;
+    private int version;
+    private Boolean active;
+    private String email;
+    private String firstName;
+    private String lastName;
+    private Boolean locked;
+    private String passwordHash;
+    private String role;
+    private String username;
+    private Long idBranch;
+
+    public UserInfo(Long id, int version, Boolean active, String email, String firstName, String lastName, Boolean locked, String passwordHash, String role, String username, Long idBranch) {
         this.id = id;
         this.version = version;
         this.active = active;
@@ -14,6 +27,7 @@ public class UserInfo implements Serializable {
         this.passwordHash = passwordHash;
         this.role = role;
         this.username = username;
+        this.idBranch = idBranch;
     }
 
     public UserInfo() {
@@ -99,14 +113,11 @@ public class UserInfo implements Serializable {
         this.username = username;
     }
 
-    private Long id;
-    private int version;
-    private Boolean active;
-    private String email;
-    private String firstName;
-    private String lastName;
-    private Boolean locked;
-    private String passwordHash;
-    private String role;
-    private String username;
+    public Long getIdBranch() {
+        return idBranch;
+    }
+
+    public void setIdBranch(Long idBranch) {
+        this.idBranch = idBranch;
+    }
 }
