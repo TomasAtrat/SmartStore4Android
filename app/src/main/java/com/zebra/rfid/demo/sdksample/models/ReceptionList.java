@@ -43,4 +43,9 @@ public class ReceptionList implements Serializable {
     public void setEndingDate(Date endingDate) {
         this.endingDate = endingDate;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%d - %s", id, description);
+    }
 }

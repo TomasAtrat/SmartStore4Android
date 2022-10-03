@@ -60,4 +60,9 @@ public class ReceptionDetail implements Serializable {
     public void setBarcode(Barcode barcode) {
         this.barcode = barcode;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%d- %s -> Agendado: %d ", id, barcode.toString(), scheduledQty);
+    }
 }

@@ -1,7 +1,7 @@
 package com.zebra.rfid.demo.sdksample.utils;
 
 public class Constants {
-    public static final String API_URL = "https://9a32-2800-a4-2554-6500-345f-ea70-de17-319c.ngrok.io";
+    public static final String API_URL = "https://483b-167-57-236-241.ngrok.io";
     public static final String AUTH_SERVICE = "/api/v1/auth/username=%s&password=%s";
     public static final String INVENTORY_SERVICE = "/api/v1/inventories/";
     public static final String GET_RECEPTION_SERVICE = "/api/v1/reception/";

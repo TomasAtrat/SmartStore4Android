@@ -117,6 +117,7 @@ public class PerformInventoryActivity extends AppCompatActivity implements Respo
                 int value = counterByBarcode.get(detail.get());
                 counterByBarcode.put(detail.get(), value + 1);
             }
+
             Log.d(TAG, "Barcode retrieved : " + barcode.getId());
 
         } catch (Exception e) {

@@ -65,15 +65,20 @@ public class InventoryService {
     }
 
     private void setAvailableInventories(JSONObject jsonObject, Spinner inventorySpinner) {
-        ListOfInventories wrapper = new Gson().fromJson(jsonObject.toString(), ListOfInventories.class);
-        inventories = wrapper.getInventories();
+        Gson gson = new GsonBuilder()
+                .setDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ").create();
+        try {
+            ListOfInventories wrapper = gson.fromJson(jsonObject.toString(), ListOfInventories.class);
+            inventories = wrapper.getInventories();
 
-        ArrayAdapter<Inventory> adapter = new ArrayAdapter<Inventory>(context,
-                android.R.layout.simple_spinner_dropdown_item,
-                inventories);
+            ArrayAdapter<Inventory> adapter = new ArrayAdapter<Inventory>(context,
+                    android.R.layout.simple_spinner_dropdown_item,
+                    inventories);
 
-        inventorySpinner.setAdapter(adapter);
-
+            inventorySpinner.setAdapter(adapter);
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
+        }
     }
 
     public void setInventoryDetails(Long id, ListView detailsList) {
@@ -138,9 +143,9 @@ public class InventoryService {
                 new JSONObject(gson.toJson(inventoryData)),
                 null,
                 error -> {
-            Log.e(TAG, error.getMessage());
-            Toast.makeText(context, "Se produjo un error al envíar los datos al servidor", Toast.LENGTH_SHORT).show();
-        });
+                    Log.e(TAG, error.getMessage());
+                    Toast.makeText(context, "Se produjo un error al envíar los datos al servidor", Toast.LENGTH_SHORT).show();
+                });
 
         VolleyRequest.getInstance(context).addToRequestQueue(request);
     }

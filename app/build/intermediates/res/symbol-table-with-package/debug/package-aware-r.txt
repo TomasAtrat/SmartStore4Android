@@ -1904,7 +1904,9 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id backToBarcodeSelectionBtn
 id barcodeOrderedTxt
+id barcodeSelectedTxt
 id barcodeTxt
 id barrier
 id baseline
@@ -2156,8 +2158,10 @@ id progress_horizontal
 id radio
 id ratio
 id readerStatus
+id readerStatus4location
 id readerStatus4reception
 id readerStatusLabel
+id readerStatusLabel4location
 id readerStatusLabel4reception
 id receptionBtn
 id receptionNumber
@@ -2183,6 +2187,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchItemBarcode
 id searchItemBtn
 id searchItemButton
 id search_badge
@@ -2263,7 +2268,6 @@ id textSpacerNoTitle
 id textStart
 id textStatus
 id textTop
-id textView
 id textView2
 id textView3
 id textView4
@@ -2382,6 +2386,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_anexos
 layout activity_inventory_selection
+layout activity_item_location
 layout activity_item_selection
 layout activity_main
 layout activity_menu
@@ -2494,6 +2499,7 @@ string BackButton
 string CancelButton
 string ContinueButton
 string Inventory
+string ItemLocation
 string ReaderStatus
 string Reception
 string RequiredMsg

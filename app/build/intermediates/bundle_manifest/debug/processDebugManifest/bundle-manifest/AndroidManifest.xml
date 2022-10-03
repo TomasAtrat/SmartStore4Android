@@ -33,6 +33,9 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.zebra.rfid.demo.sdksample.views.itemlocation.ItemLocationActivity"
+            android:exported="true" />
+        <activity
             android:name="com.zebra.rfid.demo.sdksample.views.order.AnexosActivity"
             android:exported="true" />
         <activity

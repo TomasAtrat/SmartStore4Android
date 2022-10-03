@@ -11,6 +11,7 @@ import com.zebra.rfid.demo.sdksample.R;
 import com.zebra.rfid.demo.sdksample.services.AuthService;
 import com.zebra.rfid.demo.sdksample.views.inventory.InventorySelectionActivity;
 import com.zebra.rfid.demo.sdksample.views.itemlocation.ItemSelectionActivity;
+import com.zebra.rfid.demo.sdksample.views.reception.ReceptionSelectionActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -32,6 +33,10 @@ public class MenuActivity extends AppCompatActivity {
 
         locateItemBtn.setOnClickListener(event -> {
             goToActivity(ItemSelectionActivity.class);
+        });
+
+        receptionBtn.setOnClickListener(event -> {
+            goToActivity(ReceptionSelectionActivity.class);
         });
 
         InventoryBtn.setOnClickListener(event -> {

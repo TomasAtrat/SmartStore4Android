@@ -30,9 +30,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class ReceptionActivity extends AppCompatActivity implements ResponseHandlerInterface {
-
     private static final String TAG = "ReceptionActivity";
-
 
     private LinkedList<String> barcodes;
     private ReceptionService receptionService;
@@ -57,7 +55,6 @@ public class ReceptionActivity extends AppCompatActivity implements ResponseHand
 
         rfidHandler = new RFIDHandler();
         rfidHandler.onCreate(this, this, RfidUseCase.RECEPTION, readerStatus);
-
     }
 
     private void instantiateVariables() {
@@ -75,10 +72,9 @@ public class ReceptionActivity extends AppCompatActivity implements ResponseHand
         saveReception = findViewById(R.id.saveReception);
         saveReception.setOnClickListener(e -> {
             reloadList();
-
         });
 
-        TextView title = findViewById(R.id.inventoryNumber);
+        TextView title = findViewById(R.id.receptionNumber);
         title.setText("Referencia # " + reception.getId() + " - " + reception.getDescription());
 
         detailsList = findViewById(R.id.detailsList);
