@@ -19,6 +19,7 @@ import com.zebra.rfid.demo.sdksample.components.VolleyRequest;
 import com.zebra.rfid.demo.sdksample.models.Barcode;
 import com.zebra.rfid.demo.sdksample.utils.wrappers.ListOfStock;
 import com.zebra.rfid.demo.sdksample.views.MainActivity;
+import com.zebra.rfid.demo.sdksample.views.itemlocation.ItemLocationActivity;
 import com.zebra.rfid.demo.sdksample.views.order.OrderActivity;
 
 import org.json.JSONObject;
@@ -58,8 +59,8 @@ public class ProductService {
 
     private void navigateToIntentWhenResponseHasStock(ListOfStock wrapper) {
         if (currentBranchHasStock(wrapper)) {
-            Intent intent = new Intent(context, MainActivity.class);
-            intent.putExtra(BARCODE_OBJ, wrapper);
+            Intent intent = new Intent(context, ItemLocationActivity.class);
+            intent.putExtra(BARCODE_OBJ, wrapper.getStockList().stream().findAny().get().getBarcodeBarcode());
             context.startActivity(intent);
         } else {
             new AlertDialog.Builder(context)

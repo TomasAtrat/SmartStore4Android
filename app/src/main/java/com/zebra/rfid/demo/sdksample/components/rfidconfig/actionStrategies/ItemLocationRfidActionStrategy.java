@@ -12,11 +12,11 @@ public class ItemLocationRfidActionStrategy implements RfidActionStrategy{
     }
 
     public synchronized void performRfidAction() throws InvalidUsageException, OperationFailureException {
-        //reader.Actions.Inventory.perform();
+        reader.Actions.Inventory.perform();
     }
 
     @Override
     public void stopRfidAction() throws InvalidUsageException, OperationFailureException {
-        //reader.Actions.Inventory.stop();
+        reader.Actions.Inventory.stop();
     }
 }

@@ -66,7 +66,7 @@ public class ReceptionActivity extends AppCompatActivity implements ResponseHand
         reception = (ReceptionList) getIntent().getSerializableExtra(RECEPTION_OBJ);
         reception.setStartingDate(new Date(System.currentTimeMillis()));
 
-        readerStatus = findViewById(R.id.readerStatus);
+        readerStatus = findViewById(R.id.readerStatus4reception);
 
         barcodes = new LinkedList<>();
 

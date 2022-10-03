@@ -10,6 +10,9 @@ import com.zebra.rfid.api3.RfidReadEvents;
 import com.zebra.rfid.api3.RfidStatusEvents;
 import com.zebra.rfid.api3.STATUS_EVENT_TYPE;
 import com.zebra.rfid.api3.TagData;
+import com.zebra.rfid.api3.TagDataArray;
+import com.zebra.rfid.demo.sdksample.components.epcschema.EPCSchemaStrategy;
+import com.zebra.rfid.demo.sdksample.components.epcschema.SGTIN96Schema;
 
 public class LocationEventHandler implements RfidEventsListener {
 
@@ -25,16 +28,17 @@ public class LocationEventHandler implements RfidEventsListener {
 
     @Override
     public void eventReadNotify(RfidReadEvents rfidReadEvents) {
-        TagData[] myTags = reader.Actions.getReadTags(100);
+        TagDataArray dataArray = reader.Actions.getReadTagsEx(100);
+        TagData[] myTags = dataArray.getTags();
         if (myTags != null) {
-            for (int index = 0; index < myTags.length; index++) {
-                if (myTags[index].isContainsLocationInfo()) {
-                    short dist = myTags[index].LocationInfo.getRelativeDistance();
+            for (TagData myTag : myTags) {
+                if (myTag.isContainsLocationInfo()) {
+                    short dist = myTag.LocationInfo.getRelativeDistance();
                     Log.d(TAG, "Tag relative distance " + dist);
                 }
 
-                if (myTags[index].isContainsMultiTagLocateInfo()) {
-                    short dist = myTags[index].MultiTagLocateInfo.getRelativeDistance();
+                if (myTag.isContainsMultiTagLocateInfo()) {
+                    short dist = myTag.MultiTagLocateInfo.getRelativeDistance();
                     Log.d(TAG, "Tag relative distance " + dist);
                 }
             }

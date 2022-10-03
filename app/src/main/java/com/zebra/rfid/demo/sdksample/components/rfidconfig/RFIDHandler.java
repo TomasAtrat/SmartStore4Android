@@ -52,6 +52,10 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
     private int MAX_POWER = 300;
     String readername = "RFD8500123";
 
+    public static RFIDReader getReader() {
+        return reader;
+    }
+
     public void onCreate(AppCompatActivity activity,
                          ResponseHandlerInterface responseHandlerInterface,
                          RfidUseCase useCase,
@@ -163,8 +167,6 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
                 reader.Config.setUniqueTagReport(true);
 
                 MAX_POWER = reader.ReaderCapabilities.getTransmitPowerLevelValues().length - 1;
-
-                Log.d(TAG, "Max power : " + MAX_POWER);
 
                 reader.Config.Antennas.setAntennaRfConfig(1, rfidConfigFactory.createAntennaRfConfig());
 
