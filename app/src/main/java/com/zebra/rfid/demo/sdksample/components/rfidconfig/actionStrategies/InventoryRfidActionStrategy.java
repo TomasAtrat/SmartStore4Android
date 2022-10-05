@@ -12,13 +12,13 @@ public class InventoryRfidActionStrategy implements RfidActionStrategy {
         this.reader = reader;
     }
 
-    public synchronized void performRfidAction() throws InvalidUsageException, OperationFailureException {
+    public synchronized void performRfidAction(String[] params) throws InvalidUsageException, OperationFailureException {
         reader.Actions.Inventory.perform();
     }
 
     @Override
     public void stopRfidAction() throws InvalidUsageException, OperationFailureException {
         reader.Actions.Inventory.stop();
-        reader.Actions.purgeTags();
+        //reader.Actions.purgeTags();
     }
 }

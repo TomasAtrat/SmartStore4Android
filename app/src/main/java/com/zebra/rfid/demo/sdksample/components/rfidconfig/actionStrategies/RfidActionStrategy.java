@@ -4,7 +4,7 @@ import com.zebra.rfid.api3.InvalidUsageException;
 import com.zebra.rfid.api3.OperationFailureException;
 
 public interface RfidActionStrategy {
-    void performRfidAction() throws InvalidUsageException, OperationFailureException;
+    void performRfidAction(String [] params) throws InvalidUsageException, OperationFailureException;
 
     void stopRfidAction() throws InvalidUsageException, OperationFailureException;
 }

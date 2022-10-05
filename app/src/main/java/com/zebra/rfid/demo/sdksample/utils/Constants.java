@@ -15,6 +15,8 @@ public class Constants {
     public static final String GET_STOCK_SERVICE = "/api/v1/stock/%s";
     public static final String GET_EXPEDITION_TYPES_SERVICE = "/api/v1/expedition/types/";
 
+    public static final String GET_TOP10_EPC_BARCODE_SERVICE = "/api/v1/epc/top-ten/%s";
+
     public static final String ERP_URL = "";
 
     public static final String INVENTORY_OBJ = "InventoryObj";

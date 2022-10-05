@@ -3,7 +3,9 @@ package com.zebra.rfid.demo.sdksample.services;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.API_URL;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.BARCODE_OBJ;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.GET_STOCK_SERVICE;
+import static com.zebra.rfid.demo.sdksample.utils.Constants.GET_TOP10_EPC_BARCODE_SERVICE;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.LIST_OF_STOCK_OBJ;
+import static com.zebra.rfid.demo.sdksample.views.itemlocation.ItemLocationActivity.listOfTenEpc;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -17,12 +19,16 @@ import com.google.gson.Gson;
 import com.zebra.rfid.demo.sdksample.R;
 import com.zebra.rfid.demo.sdksample.components.VolleyRequest;
 import com.zebra.rfid.demo.sdksample.models.Barcode;
+import com.zebra.rfid.demo.sdksample.models.EpcBarcode;
+import com.zebra.rfid.demo.sdksample.utils.wrappers.ListOfEpc;
 import com.zebra.rfid.demo.sdksample.utils.wrappers.ListOfStock;
 import com.zebra.rfid.demo.sdksample.views.MainActivity;
 import com.zebra.rfid.demo.sdksample.views.itemlocation.ItemLocationActivity;
 import com.zebra.rfid.demo.sdksample.views.order.OrderActivity;
 
 import org.json.JSONObject;
+
+import java.util.List;
 
 public class ProductService {
 
@@ -80,4 +86,23 @@ public class ProductService {
         return wrapper.getStockList().stream().anyMatch(i -> i.getBranch().getId().equals(AuthService.userInfo.getIdBranch()));
     }
 
+    public void getTopTenEpcByBarcodeAsync(Barcode barcode) {
+        final String mURL = String.format(API_URL + GET_TOP10_EPC_BARCODE_SERVICE, barcode.getId());
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET,
+                mURL,
+                null,
+                this::setListOfTenEpc,
+                error -> Log.e(TAG, error.getMessage()));
+
+        VolleyRequest.getInstance(context).addToRequestQueue(request);
+    }
+
+    private void setListOfTenEpc(JSONObject response) {
+        Log.d(TAG, "Json: " + response.toString());
+
+        ListOfEpc wrapper = new Gson().fromJson(response.toString(), ListOfEpc.class);
+
+        listOfTenEpc = wrapper.getEpcBarcodeList();
+    }
 }

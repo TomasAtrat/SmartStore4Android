@@ -1,13 +1,19 @@
-#Mon Oct 03 17:44:52 UYT 2022
-path.3=classes.dex
-path.2=classes.dex
+#Tue Oct 04 23:27:18 UYT 2022
 path.1=classes.dex
 path.0=classes.dex
+renamed.5=classes6.dex
+renamed.4=classes5.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
+base.5=C\:\\Zebra RFID SDK\\Zebra_RFIDAPI3_SDK_2.0.2.100\\SDKSample\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+base.4=C\:\\Zebra RFID SDK\\Zebra_RFIDAPI3_SDK_2.0.2.100\\SDKSample\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 base.3=C\:\\Zebra RFID SDK\\Zebra_RFIDAPI3_SDK_2.0.2.100\\SDKSample\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3
 base.2=C\:\\Zebra RFID SDK\\Zebra_RFIDAPI3_SDK_2.0.2.100\\SDKSample\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
 base.1=C\:\\Zebra RFID SDK\\Zebra_RFIDAPI3_SDK_2.0.2.100\\SDKSample\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 base.0=C\:\\Zebra RFID SDK\\Zebra_RFIDAPI3_SDK_2.0.2.100\\SDKSample\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.5=classes3.dex
+path.4=classes2.dex
+path.3=classes.dex
+path.2=classes.dex

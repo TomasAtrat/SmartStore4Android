@@ -144,7 +144,7 @@ public class InventoryService {
                 null,
                 error -> {
                     Log.e(TAG, error.getMessage());
-                    Toast.makeText(context, "Se produjo un error al envíar los datos al servidor", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Se produjo un error al envíar los datos al ERP", Toast.LENGTH_SHORT).show();
                 });
 
         VolleyRequest.getInstance(context).addToRequestQueue(request);

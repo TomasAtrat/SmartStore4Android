@@ -102,8 +102,8 @@ public class PerformInventoryActivity extends AppCompatActivity implements Respo
     public void handleTagdata(TagData[] tagData) {
         EPCSchemaStrategy epcSchema = new SGTIN96Schema();
         for (TagData tagDatum : tagData) {
-            if (tagDatum.getTagSeenCount() <= 1)
-                updateInventory(epcSchema, tagDatum);
+            Log.d(TAG, tagDatum.getTagID());
+            updateInventory(epcSchema, tagDatum);
         }
     }
 
@@ -111,10 +111,11 @@ public class PerformInventoryActivity extends AppCompatActivity implements Respo
         try {
             Barcode barcode = epcSchema.getBarcodeFromEPC(tagDatum.getTagID());
 
-            Optional<InventoryDetail> detail = details.stream().filter(i -> i.getBarcode().getId().equals(barcode.getId())).findFirst();
+            Optional<InventoryDetail> detail = details.stream().filter(i -> i.getBarcode().getId().equals(barcode.getId())).findAny();
 
             if (detail.isPresent()) {
                 int value = counterByBarcode.get(detail.get());
+                Log.d(TAG, "Counter value: " + value);
                 counterByBarcode.put(detail.get(), value + 1);
             }
 
@@ -133,7 +134,7 @@ public class PerformInventoryActivity extends AppCompatActivity implements Respo
     }
 
     private void handleActionWhenTriggerIsPressed() {
-        rfidHandler.executeRfidAction();
+        rfidHandler.executeRfidAction(null);
     }
 
     private void handleActionWhenTriggerNotPressed() {

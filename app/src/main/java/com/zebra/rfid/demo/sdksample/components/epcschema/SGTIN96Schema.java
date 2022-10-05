@@ -10,7 +10,7 @@ public class SGTIN96Schema implements EPCSchemaStrategy {
     public Barcode getBarcodeFromEPC(String epc) throws RuntimeException {
         try {
             ParseSGTIN parseSGTIN = ParseSGTIN.Builder()
-                    .withRFIDTag("3035D7CF14003C0000000001")
+                    .withRFIDTag(epc)
                     .build();
 
             SGTIN sgtin = parseSGTIN.getSGTIN();

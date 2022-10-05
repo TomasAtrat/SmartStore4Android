@@ -2,6 +2,7 @@ package com.zebra.rfid.demo.sdksample.services;
 
 import static com.zebra.rfid.demo.sdksample.utils.Constants.ADD_RECEPTION_SERVICE;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.API_URL;
+import static com.zebra.rfid.demo.sdksample.utils.Constants.ERP_URL;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.GET_RECEPTION_DETAILS_SERVICE;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.GET_RECEPTION_SERVICE;
 import static com.zebra.rfid.demo.sdksample.views.reception.ReceptionActivity.adapter;
@@ -79,7 +80,7 @@ public class ReceptionService {
                     details,
                     problems);
 
-//            this.informToERP(receptionData);
+            this.informToERP(receptionData);
 
             this.sendReception(receptionData);
 
@@ -87,6 +88,26 @@ public class ReceptionService {
             Log.e(TAG, e.getMessage());
         }
 
+    }
+
+    private void informToERP(Reception receptionData) throws JSONException {
+        final String mURL = ERP_URL + ADD_RECEPTION_SERVICE;
+
+        Gson gson = new GsonBuilder()
+                .setDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz").create();
+
+        Log.d(TAG, "Gson: " + gson.toJson(receptionData));
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST,
+                mURL,
+                new JSONObject(gson.toJson(receptionData)),
+                null,
+                error -> {
+                    Log.e(TAG, error.getMessage());
+                    Toast.makeText(context, "Se produjo un error al envíar los datos al ERP", Toast.LENGTH_LONG).show();
+                });
+
+        VolleyRequest.getInstance(context).addToRequestQueue(request);
     }
 
     private void sendReception(Reception receptionData) throws JSONException {
@@ -146,15 +167,19 @@ public class ReceptionService {
     }
 
     private void setReceptionDetailsIntoList(JSONObject response, ListView detailsList) {
-        Reception receptionData = new Gson().fromJson(response.toString(), Reception.class);
+        try {
+            Reception receptionData = new Gson().fromJson(response.toString(), Reception.class);
 
-        details = new ArrayList<>(receptionData.getDetails());
+            details = new ArrayList<>(receptionData.getDetails());
 
-        counterByBarcode = convertDetailsListToHashMap(details);
+            counterByBarcode = convertDetailsListToHashMap(details);
 
-        adapter = new ArrayAdapter<>(context, android.R.layout.simple_list_item_1, details);
+            adapter = new ArrayAdapter<>(context, android.R.layout.simple_list_item_1, details);
 
-        detailsList.setAdapter(adapter);
+            detailsList.setAdapter(adapter);
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
+        }
     }
 
     private HashMap<ReceptionDetail, Integer> convertDetailsListToHashMap(List<ReceptionDetail> details) {

@@ -51,10 +51,13 @@ public class ReceptionActivity extends AppCompatActivity implements ResponseHand
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reception);
 
-        instantiateVariables();
-
-        rfidHandler = new RFIDHandler();
-        rfidHandler.onCreate(this, this, RfidUseCase.RECEPTION, readerStatus);
+        try {
+            instantiateVariables();
+            rfidHandler = new RFIDHandler();
+            rfidHandler.onCreate(this, this, RfidUseCase.INVENTORY, readerStatus);
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
+        }
     }
 
     private void instantiateVariables() {
@@ -77,7 +80,7 @@ public class ReceptionActivity extends AppCompatActivity implements ResponseHand
         TextView title = findViewById(R.id.receptionNumber);
         title.setText("Referencia # " + reception.getId() + " - " + reception.getDescription());
 
-        detailsList = findViewById(R.id.detailsList);
+        detailsList = findViewById(R.id.referencesList);
 
         this.receptionService.setReceptionDetails(reception.getId(), detailsList);
     }
@@ -125,7 +128,7 @@ public class ReceptionActivity extends AppCompatActivity implements ResponseHand
     }
 
     private void handleActionWhenTriggerIsPressed() {
-        rfidHandler.executeRfidAction();
+        rfidHandler.executeRfidAction(null);
     }
 
     private void handleActionWhenTriggerNotPressed() {

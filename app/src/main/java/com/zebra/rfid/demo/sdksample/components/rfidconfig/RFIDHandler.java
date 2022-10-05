@@ -214,11 +214,11 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
         }
     }
 
-    public synchronized void executeRfidAction() {
+    public synchronized void executeRfidAction(String [] params) {
         if (!isReaderConnected())
             return;
         try {
-            this.actionStrategy.performRfidAction();
+            this.actionStrategy.performRfidAction(params);
         } catch (InvalidUsageException | OperationFailureException e) {
             e.printStackTrace();
         }

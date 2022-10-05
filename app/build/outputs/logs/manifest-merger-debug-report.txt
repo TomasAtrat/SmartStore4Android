@@ -7,6 +7,7 @@ INJECTED from C:\Zebra RFID SDK\Zebra_RFIDAPI3_SDK_2.0.2.100\SDKSample\app\src\m
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\128336086f612249bf0396bf0580c1a0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\edaad4c2412344baa73e41fb5b01bd4d\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\750a400a63179322e56f375089f06ffb\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.AnyChart:AnyChart-Android:1.1.2] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\e283bbbc43908ac60c6d367cafbe97e0\AndroidManifest.xml:2:1-17:12
 MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c874cafec9b42d601726fa4854afc21d\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\15a38d5d195d54c72d9cb4d2b05cdfc1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\877110e9c615d0a169e86ea66f31788f\AndroidManifest.xml:17:1-24:12
@@ -16,6 +17,7 @@ MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\hyc\
 MERGED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:2:1-28:12
 MERGED from [androidx.test.ext:junit:1.1.3] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\205b7f7c5863cc118e968ef693d945eb\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.volley:volley:1.2.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1979f6f44e7b952c162ce30041a85a1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.Gruzer:simple-gauge-android:0.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\96749b1edad2b03b0de53e85a3b70d8c\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\920857d66ef95ba5aacc5ccc396dd73e\AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7f8d6960d5c9f93159d25acf191c9817\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\1502ccd7fa8e8adf1a605906feae6551\AndroidManifest.xml:2:1-9:12
@@ -90,6 +92,8 @@ MERGED from [com.google.android.material:material:1.4.0] C:\Users\hyc\.gradle\ca
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\edaad4c2412344baa73e41fb5b01bd4d\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\750a400a63179322e56f375089f06ffb\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\750a400a63179322e56f375089f06ffb\AndroidManifest.xml:9:5-20
+MERGED from [com.github.AnyChart:AnyChart-Android:1.1.2] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\e283bbbc43908ac60c6d367cafbe97e0\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.AnyChart:AnyChart-Android:1.1.2] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\e283bbbc43908ac60c6d367cafbe97e0\AndroidManifest.xml:11:5-15:19
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\f18f3f411d4f338fdfca07b42863b323\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\f18f3f411d4f338fdfca07b42863b323\AndroidManifest.xml:7:5-20
 MERGED from [:RFIDAPI3Library] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\8ada9e9b74e86a4de716001eb42ef7e8\AndroidManifest.xml:24:5-26:44
@@ -212,6 +216,8 @@ MERGED from [com.google.android.material:material:1.4.0] C:\Users\hyc\.gradle\ca
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\edaad4c2412344baa73e41fb5b01bd4d\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\750a400a63179322e56f375089f06ffb\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\750a400a63179322e56f375089f06ffb\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.AnyChart:AnyChart-Android:1.1.2] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\e283bbbc43908ac60c6d367cafbe97e0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.AnyChart:AnyChart-Android:1.1.2] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\e283bbbc43908ac60c6d367cafbe97e0\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c874cafec9b42d601726fa4854afc21d\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\c874cafec9b42d601726fa4854afc21d\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\15a38d5d195d54c72d9cb4d2b05cdfc1\AndroidManifest.xml:20:5-44
@@ -230,6 +236,8 @@ MERGED from [androidx.test.ext:junit:1.1.3] C:\Users\hyc\.gradle\caches\transfor
 MERGED from [androidx.test.ext:junit:1.1.3] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\205b7f7c5863cc118e968ef693d945eb\AndroidManifest.xml:20:5-22:41
 MERGED from [com.android.volley:volley:1.2.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1979f6f44e7b952c162ce30041a85a1\AndroidManifest.xml:5:5-43
 MERGED from [com.android.volley:volley:1.2.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\b1979f6f44e7b952c162ce30041a85a1\AndroidManifest.xml:5:5-43
+MERGED from [com.github.Gruzer:simple-gauge-android:0.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\96749b1edad2b03b0de53e85a3b70d8c\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Gruzer:simple-gauge-android:0.3.1] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\96749b1edad2b03b0de53e85a3b70d8c\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\920857d66ef95ba5aacc5ccc396dd73e\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\920857d66ef95ba5aacc5ccc396dd73e\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\hyc\.gradle\caches\transforms-2\files-2.1\7f8d6960d5c9f93159d25acf191c9817\AndroidManifest.xml:20:5-44

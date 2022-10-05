@@ -1980,6 +1980,7 @@ id disableHome
 id disablePostScroll
 id disableScroll
 id disjoint
+id distanceIndicator
 id documentTxt
 id dragDown
 id dragEnd
@@ -2309,6 +2310,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id web_view
 id wide
 id withText
 id withinBounds
@@ -2489,6 +2491,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout view_anychart
 menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_foreground
