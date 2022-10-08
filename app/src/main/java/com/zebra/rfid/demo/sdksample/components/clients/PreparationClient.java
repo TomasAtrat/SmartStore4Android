@@ -1,5 +1,6 @@
 package com.zebra.rfid.demo.sdksample.components.clients;
 
+import static com.zebra.rfid.demo.sdksample.utils.Constants.ADD_PREPARATION_SERVICE;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.API_URL;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.GET_PREPARATION_SERVICE;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.GET_TOP10_EPC_BARCODE_SERVICE;
@@ -8,7 +9,9 @@ import static com.zebra.rfid.demo.sdksample.views.preparation.PreparationActivit
 import static com.zebra.rfid.demo.sdksample.views.preparation.PreparationActivity.productDescriptionTxt;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.toolbox.JsonObjectRequest;
@@ -19,7 +22,9 @@ import com.zebra.rfid.demo.sdksample.models.Barcode;
 import com.zebra.rfid.demo.sdksample.services.AuthService;
 import com.zebra.rfid.demo.sdksample.utils.wrappers.ListOfEpc;
 import com.zebra.rfid.demo.sdksample.utils.wrappers.PreparationWrapper;
+import com.zebra.rfid.demo.sdksample.views.MenuActivity;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class PreparationClient {
@@ -74,12 +79,33 @@ public class PreparationClient {
     }
 
     private void setListOfTenEpc(JSONObject response) {
-        Log.d(TAG, "Json: " + response.toString());
-
         ListOfEpc wrapper = new Gson().fromJson(response.toString(), ListOfEpc.class);
 
         listOfTenEpc = wrapper.getEpcBarcodeList();
 
         Log.i(TAG, new Gson().toJson(listOfTenEpc));
+    }
+
+    public void savePreparationAndDetailsAsync(PreparationWrapper wrapper) throws JSONException {
+        final String mURL = API_URL + ADD_PREPARATION_SERVICE;
+
+        Gson gson = new GsonBuilder()
+                .setDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ").create();
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET,
+                mURL,
+                new JSONObject(gson.toJson(wrapper)),
+                this::onSavePreparationResponse,
+                error -> {
+                    Toast.makeText(context, "Ocurrió un error al envíar los datos al servidor", Toast.LENGTH_LONG).show();
+                    Log.e(TAG, error.getMessage());
+                });
+
+        VolleyRequest.getInstance(context).addToRequestQueue(request);
+    }
+
+    private void onSavePreparationResponse(JSONObject jsonObject) {
+        Toast.makeText(context, "Datos guardados correctamente", Toast.LENGTH_LONG).show();
+        context.startActivity(new Intent(context, MenuActivity.class));
     }
 }

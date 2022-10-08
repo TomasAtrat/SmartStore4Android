@@ -1,7 +1,6 @@
 package com.zebra.rfid.demo.sdksample.views.itemlocation;
 
 import static com.zebra.rfid.demo.sdksample.utils.Constants.BARCODE_OBJ;
-import static com.zebra.rfid.demo.sdksample.utils.Constants.LIST_OF_STOCK_OBJ;
 import static java.lang.Double.parseDouble;
 
 import android.app.AlertDialog;
@@ -24,7 +23,6 @@ import com.zebra.rfid.demo.sdksample.components.rfidconfig.rfidEventHandlers.Res
 import com.zebra.rfid.demo.sdksample.models.Barcode;
 import com.zebra.rfid.demo.sdksample.models.EpcBarcode;
 import com.zebra.rfid.demo.sdksample.services.ProductService;
-import com.zebra.rfid.demo.sdksample.views.order.OrderActivity;
 
 import java.util.List;
 

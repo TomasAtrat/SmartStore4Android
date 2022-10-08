@@ -86,7 +86,6 @@ public class PerformInventoryActivity extends AppCompatActivity implements Respo
         saveInventory = findViewById(R.id.saveInventory);
         saveInventory.setOnClickListener(e -> {
             reloadList();
-
         });
 
         TextView title = findViewById(R.id.inventoryNumber);

@@ -14,6 +14,7 @@ public class Constants {
     public static final String GET_ORDERS_TO_PREPARE_SERVICE = "/api/v1/orders/to-prepare";
 
     public static final String GET_PREPARATION_SERVICE = "/api/v1/preparation/%d/%d";
+    public static final String ADD_PREPARATION_SERVICE = "/api/v1/preparation/";
 
     public static final String GET_STOCK_SERVICE = "/api/v1/stock/%s";
     public static final String GET_EXPEDITION_TYPES_SERVICE = "/api/v1/expedition/types/";
@@ -28,5 +29,6 @@ public class Constants {
     public static final String LIST_OF_STOCK_OBJ = "StockObj";
     public static final String BARCODE_OBJ = "BarcodeObj";
     public static final String ORDER_WRAPPER_OBJ = "OrderWrapperObj";
+    public static final String PREPARATION_WRAPPER_OBJ = "PreparationWrapperObj";
     public static final String ORDER_INFO_OBJ = "OrderInfoObj";
 }

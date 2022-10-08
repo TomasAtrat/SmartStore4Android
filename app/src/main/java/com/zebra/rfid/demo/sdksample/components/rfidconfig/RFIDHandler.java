@@ -6,23 +6,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.zebra.rfid.api3.Antennas;
-import com.zebra.rfid.api3.Antennas.RFMode;
-import com.zebra.rfid.api3.DYNAMIC_POWER_OPTIMIZATION;
 import com.zebra.rfid.api3.ENUM_TRANSPORT;
 import com.zebra.rfid.api3.ENUM_TRIGGER_MODE;
-import com.zebra.rfid.api3.INVENTORY_STATE;
 import com.zebra.rfid.api3.InvalidUsageException;
 import com.zebra.rfid.api3.OperationFailureException;
 import com.zebra.rfid.api3.RFIDReader;
-import com.zebra.rfid.api3.RFID_EVENT_TYPE;
-import com.zebra.rfid.api3.RFModes;
 import com.zebra.rfid.api3.ReaderDevice;
 import com.zebra.rfid.api3.Readers;
 import com.zebra.rfid.api3.RfidEventsListener;
-import com.zebra.rfid.api3.SCAN_BATCH_MODE;
-import com.zebra.rfid.api3.SESSION;
-import com.zebra.rfid.api3.SL_FLAG;
 import com.zebra.rfid.api3.START_TRIGGER_TYPE;
 import com.zebra.rfid.api3.STOP_TRIGGER_TYPE;
 import com.zebra.rfid.api3.TriggerInfo;
@@ -69,7 +60,12 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
         InitSDK();
     }
 
-    private boolean isReaderConnected() {
+    public void resetReaderConfig(RfidUseCase useCase){
+        this.useCase = useCase;
+        ConfigureReader();
+    }
+
+    public boolean isReaderConnected() {
         if (reader != null && reader.isConnected())
             return true;
         else {
@@ -309,11 +305,11 @@ private class ConnectionTask extends AsyncTask<Void, Void, String> {
     }
 
     public void onPause() {
-        disconnect();
+        //disconnect();
     }
 
     public void onDestroy() {
-        dispose();
+        //dispose();
     }
 
     //endregion

@@ -31,5 +31,6 @@
     <string name="BackButton">Atrás</string>
 
     <string name="RequiredMsg">%s es un campo requerido</string>
+    <string name="previousPreparedDetail">Detalle anterior</string>
 
 </resources>

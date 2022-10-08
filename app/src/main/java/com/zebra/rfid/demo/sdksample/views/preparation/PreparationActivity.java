@@ -1,25 +1,23 @@
 package com.zebra.rfid.demo.sdksample.views.preparation;
 
 import static com.zebra.rfid.demo.sdksample.utils.Constants.ORDER_INFO_OBJ;
-
+import static com.zebra.rfid.demo.sdksample.utils.Constants.PREPARATION_WRAPPER_OBJ;
 import static java.lang.Double.parseDouble;
 import static java.lang.String.format;
-import static java.lang.System.err;
 import static java.lang.System.lineSeparator;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.ekn.gruzer.gaugelibrary.HalfGauge;
 import com.ekn.gruzer.gaugelibrary.Range;
@@ -28,12 +26,12 @@ import com.zebra.rfid.demo.sdksample.R;
 import com.zebra.rfid.demo.sdksample.components.rfidconfig.RFIDHandler;
 import com.zebra.rfid.demo.sdksample.components.rfidconfig.RfidUseCase;
 import com.zebra.rfid.demo.sdksample.components.rfidconfig.rfidEventHandlers.ResponseHandlerInterface;
+import com.zebra.rfid.demo.sdksample.models.Barcode;
 import com.zebra.rfid.demo.sdksample.models.EpcBarcode;
-import com.zebra.rfid.demo.sdksample.models.OrderDetail;
 import com.zebra.rfid.demo.sdksample.models.OrderInfo;
 import com.zebra.rfid.demo.sdksample.models.PreparationDetail;
 import com.zebra.rfid.demo.sdksample.services.PreparationService;
-import com.zebra.rfid.demo.sdksample.views.itemlocation.ItemSelectionActivity;
+import com.zebra.rfid.demo.sdksample.utils.wrappers.PreparationWrapper;
 
 import java.util.Date;
 import java.util.List;
@@ -64,7 +62,6 @@ public class PreparationActivity extends AppCompatActivity implements ResponseHa
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_preparation);
 
-            //Need 10 tags per product
             instantiateVariables();
 
             fetchPreparationDetailsAsync(orderInfo.getId());
@@ -133,8 +130,16 @@ public class PreparationActivity extends AppCompatActivity implements ResponseHa
     private void goBack() {
         new AlertDialog.Builder(this)
                 .setTitle("Volver atrás")
-                .setMessage("¿Estás seguro que quieres volver atrás?")
+                .setMessage("¿Estás seguro que quieres volver atrás? Los datos de la preparación no serán guardados")
                 .setIcon(android.R.drawable.ic_dialog_alert)
+                .setNeutralButton(R.string.previousPreparedDetail, (dialog, whichButton) -> {
+                    if (detailsIterator > 0) {
+                        detailsIterator--;
+                        goToDetailInIterator();
+                    } else {
+                        Toast.makeText(this, "No hay un detalle previo preparado", Toast.LENGTH_LONG).show();
+                    }
+                })
                 .setPositiveButton(android.R.string.yes, (dialog, whichButton) -> {
                     Intent intent = new Intent(this, PreparationSelectionActivity.class);
                     startActivity(intent);
@@ -165,17 +170,28 @@ public class PreparationActivity extends AppCompatActivity implements ResponseHa
     private void continueWithNextDetail() {
         detailsIterator++;
 
-        currentDetail = this.preparationDetails.get(detailsIterator);
+        if (detailsIterator < preparationDetails.size()) {
+            goToDetailInIterator();
+        } else {
+            Intent intent = new Intent(this, PreparationValidationActivity.class);
+            intent.putExtra(PREPARATION_WRAPPER_OBJ, new PreparationWrapper(null, preparationDetails));
+            startActivity(intent);
+        }
+    }
 
-        String title = format(TITLE_FORMAT,
-                currentDetail.getBarcode().getId(),
+    private void goToDetailInIterator() {
+        currentDetail = preparationDetails.get(detailsIterator);
+
+        Barcode barcode = currentDetail.getBarcode();
+
+        @SuppressLint("DefaultLocale") String title = format(TITLE_FORMAT,
+                barcode.getId(),
                 lineSeparator(),
                 currentDetail.getOrderedQty());
 
         barcodeTitle.setText(title);
 
-        //It means that it comes the next item
-        //Look for ten epc related to that barcode
+        preparationService.getTopTenEpcByBarcodeAsync(barcode);
     }
 
     @Override
@@ -185,14 +201,23 @@ public class PreparationActivity extends AppCompatActivity implements ResponseHa
                 Log.d(TAG, String.valueOf(tagDatum.LocationInfo.getRelativeDistance()));
                 runOnUiThread(() -> {
                     double relativeDistance = parseDouble(String.valueOf(tagDatum.LocationInfo.getRelativeDistance()));
-                    distanceIndicator.setValue(relativeDistance);
+                    updateIndicator(relativeDistance);
                 });
             }
         }
     }
 
+    public synchronized void updateIndicator(double relativeDistance) {
+        distanceIndicator.setValue(relativeDistance);
+    }
+
     @Override
     public void handleTriggerPress(boolean pressed) {
-
+        if (pressed)
+            rfidHandler.executeRfidAction(new String[]{listOfTenEpc.stream().findAny().get().getId()});
+        else {
+            rfidHandler.stopRfidAction();
+            updateIndicator(0);
+        }
     }
 }
