@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".views.preparation.PreparationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".views.preparation.PreparationSelectionActivity"
+            android:exported="true" />
+        <activity
             android:name=".views.itemlocation.ItemLocationActivity"
             android:exported="true" />
         <activity

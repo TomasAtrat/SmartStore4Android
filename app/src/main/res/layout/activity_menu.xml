@@ -55,6 +55,13 @@
             android:text="@string/inventory_intent" />
 
         <Button
+            android:id="@+id/preparationBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/preparation_intent" />
+
+
+        <Button
             android:id="@+id/logoutBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

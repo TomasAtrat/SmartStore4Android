@@ -30,19 +30,6 @@ public class LocationEventHandler implements RfidEventsListener {
     public void eventReadNotify(RfidReadEvents rfidReadEvents) {
         TagDataArray dataArray = reader.Actions.getReadTagsEx(100);
         TagData[] myTags = dataArray.getTags();
-        if (myTags != null) {
-            for (TagData myTag : myTags) {
-                if (myTag.isContainsLocationInfo()) {
-                    short dist = myTag.LocationInfo.getRelativeDistance();
-                    Log.d(TAG, "Tag relative distance " + dist);
-                }
-
-                if (myTag.isContainsMultiTagLocateInfo()) {
-                    short dist = myTag.MultiTagLocateInfo.getRelativeDistance();
-                    Log.d(TAG, "Tag relative distance " + dist);
-                }
-            }
-        }
 
         new AsyncDataUpdate(responseHandlerInterface).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, myTags);
     }

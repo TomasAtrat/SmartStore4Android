@@ -50,7 +50,7 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
     private RfidActionStrategy actionStrategy;
 
     private int MAX_POWER = 300;
-    String readername = "RFD8500123";
+    String readername = "RFD850019055523021626";
 
     public static RFIDReader getReader() {
         return reader;
@@ -80,11 +80,13 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
 
     private void InitSDK() {
         Log.d(TAG, "InitSDK");
+
         if (readers == null) {
             new CreateInstanceTask().execute();
         } else
             new ConnectionTask().execute();
-    }
+
+}
 
     private synchronized void GetAvailableReader() {
         Log.d(TAG, "GetAvailableReader");
@@ -214,7 +216,7 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
         }
     }
 
-    public synchronized void executeRfidAction(String [] params) {
+    public synchronized void executeRfidAction(String[] params) {
         if (!isReaderConnected())
             return;
         try {
@@ -234,52 +236,53 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
         }
     }
 
-    //region AsyncTasks
+//region AsyncTasks
 
-    private class CreateInstanceTask extends AsyncTask<Void, Void, Void> {
-        @Override
-        protected Void doInBackground(Void... voids) {
-            Log.d(TAG, "CreateInstanceTask");
-            InvalidUsageException invalidUsageException = null;
-            readers = new Readers(context, ENUM_TRANSPORT.ALL);
-            try {
-                availableRFIDReaderList = readers.GetAvailableRFIDReaderList();
-            } catch (InvalidUsageException e) {
-                e.printStackTrace();
-            }
-            if (invalidUsageException != null) {
-                readers.Dispose();
-                readers = null;
-                if (readers == null) {
-                    readers = new Readers(context, ENUM_TRANSPORT.BLUETOOTH);
-                }
-            }
-            return null;
+private class CreateInstanceTask extends AsyncTask<Void, Void, Void> {
+    @Override
+    protected Void doInBackground(Void... voids) {
+        Log.d(TAG, "CreateInstanceTask");
+        InvalidUsageException invalidUsageException = null;
+        readers = new Readers(context, ENUM_TRANSPORT.ALL);
+        try {
+            availableRFIDReaderList = readers.GetAvailableRFIDReaderList();
+        } catch (InvalidUsageException e) {
+            e.printStackTrace();
         }
-
-        @Override
-        protected void onPostExecute(Void aVoid) {
-            super.onPostExecute(aVoid);
-            new ConnectionTask().execute();
+        if (invalidUsageException != null) {
+            readers.Dispose();
+            readers = null;
+            if (readers == null) {
+                readers = new Readers(context, ENUM_TRANSPORT.BLUETOOTH);
+            }
         }
+        return null;
     }
 
-    private class ConnectionTask extends AsyncTask<Void, Void, String> {
-        @Override
-        protected String doInBackground(Void... voids) {
-            Log.d(TAG, "ConnectionTask");
-            GetAvailableReader();
-            if (reader != null)
-                return connect();
-            return "Failed to find or connect reader";
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-            super.onPostExecute(result);
-            textView.setText(result);
-        }
+    @Override
+    protected void onPostExecute(Void aVoid) {
+        super.onPostExecute(aVoid);
+        new ConnectionTask().execute();
     }
+}
+
+private class ConnectionTask extends AsyncTask<Void, Void, String> {
+    @Override
+    protected String doInBackground(Void... voids) {
+        Log.d(TAG, "ConnectionTask");
+        GetAvailableReader();
+        if (reader != null)
+            return connect();
+        return "Failed to find or connect reader";
+    }
+
+    @Override
+    protected void onPostExecute(String result) {
+        super.onPostExecute(result);
+        textView.setText(result);
+    }
+
+}
 
     //endregion
 

@@ -1,11 +1,15 @@
 package com.zebra.rfid.demo.sdksample.views.itemlocation;
 
 import static com.zebra.rfid.demo.sdksample.utils.Constants.BARCODE_OBJ;
+import static com.zebra.rfid.demo.sdksample.utils.Constants.LIST_OF_STOCK_OBJ;
 import static java.lang.Double.parseDouble;
 
+import android.app.AlertDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +24,7 @@ import com.zebra.rfid.demo.sdksample.components.rfidconfig.rfidEventHandlers.Res
 import com.zebra.rfid.demo.sdksample.models.Barcode;
 import com.zebra.rfid.demo.sdksample.models.EpcBarcode;
 import com.zebra.rfid.demo.sdksample.services.ProductService;
+import com.zebra.rfid.demo.sdksample.views.order.OrderActivity;
 
 import java.util.List;
 
@@ -31,6 +36,7 @@ public class ItemLocationActivity extends AppCompatActivity implements ResponseH
 
     private TextView readerStatus, barcodeTitle;
     private HalfGauge distanceIndicator;
+    private Button backToSelection;
 
     private ProductService productService;
 
@@ -64,10 +70,24 @@ public class ItemLocationActivity extends AppCompatActivity implements ResponseH
 
         readerStatus = findViewById(R.id.readerStatus4location);
         barcodeTitle = findViewById(R.id.barcodeSelectedTxt);
+        backToSelection = findViewById(R.id.backToBarcodeSelectionBtn);
+        backToSelection.setOnClickListener(e-> goBackToBarcodeSelection());
 
         barcodeTitle.setText(barcodeTitle.getText().toString() + barcode.getId());
 
         productService.getTopTenEpcByBarcodeAsync(barcode);
+    }
+
+    private void goBackToBarcodeSelection() {
+        new AlertDialog.Builder(this)
+                .setTitle("Volver atrás")
+                .setMessage("¿Estás seguro que quieres volver atrás?")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton(android.R.string.yes, (dialog, whichButton) -> {
+                    Intent intent = new Intent(this, ItemSelectionActivity.class);
+                    startActivity(intent);
+                })
+                .setNegativeButton(R.string.CancelButton, null).show();
     }
 
     private void setUpDistanceIndicator() {
@@ -101,13 +121,16 @@ public class ItemLocationActivity extends AppCompatActivity implements ResponseH
     public void handleTagdata(TagData[] tagData) {
         for (TagData tagDatum : tagData) {
             if (tagDatum.isContainsLocationInfo()) {
-                Log.d(TAG, String.valueOf(tagDatum.LocationInfo.getRelativeDistance()));
                 runOnUiThread(() -> {
                     double relativeDistance = parseDouble(String.valueOf(tagDatum.LocationInfo.getRelativeDistance()));
-                    distanceIndicator.setValue(relativeDistance);
+                    updateIndicator(relativeDistance);
                 });
             }
         }
+    }
+
+    public synchronized void updateIndicator(double relativeDistance) {
+        distanceIndicator.setValue(relativeDistance);
     }
 
     @Override
@@ -117,7 +140,7 @@ public class ItemLocationActivity extends AppCompatActivity implements ResponseH
         else {
             rfidHandler.stopRfidAction();
             runOnUiThread(() -> {
-                distanceIndicator.setValue(0);
+                updateIndicator(0);
             });
         }
     }

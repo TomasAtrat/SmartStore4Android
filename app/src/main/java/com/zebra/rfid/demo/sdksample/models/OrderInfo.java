@@ -137,4 +137,9 @@ public class OrderInfo implements Serializable {
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Pedido %d", id);
+    }
 }

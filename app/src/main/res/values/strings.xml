@@ -6,12 +6,18 @@
     <string name="login_btn">Iniciar sesión</string>
     <string name="username_field">Nombre de usuario</string>
     <string name="password_field">Contraseña</string>
+
     <string name="inventory_intent">Inventario</string>
     <string name="locate_item_intent">Localizar ítem</string>
     <string name="reception_intent">Recepción</string>
+    <string name="preparation_intent">Preparar pedido</string>
     <string name="logout_intent">Cerrar sesión</string>
+
+
     <string name="selectInventoryTitle">Seleccionar inventario</string>
+    <string name="selectOrderTitle">Preparación de pedido</string>
     <string name="selectReceptionBtn">Seleccionar referencia</string>
+    <string name="selectOrderBtn">Preparar pedido</string>
     <string name="selectInventoryBtn">Seleccionar inventario</string>
     <string name="selectReceptionTitle">Seleccionar referencia</string>
     <string name="Inventory">Inventario #</string>
@@ -19,12 +25,10 @@
     <string name="ItemLocation">Búsqueda de ítem</string>
     <string name="ReaderStatus">Estado del lector :</string>
 
-
     <string name="ContinueButton">Continuar</string>
     <string name="AcceptButton">Aceptar</string>
     <string name="CancelButton">Cancelar</string>
     <string name="BackButton">Atrás</string>
-
 
     <string name="RequiredMsg">%s es un campo requerido</string>
 

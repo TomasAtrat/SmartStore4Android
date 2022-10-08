@@ -11,11 +11,12 @@ import com.zebra.rfid.demo.sdksample.R;
 import com.zebra.rfid.demo.sdksample.services.AuthService;
 import com.zebra.rfid.demo.sdksample.views.inventory.InventorySelectionActivity;
 import com.zebra.rfid.demo.sdksample.views.itemlocation.ItemSelectionActivity;
+import com.zebra.rfid.demo.sdksample.views.preparation.PreparationSelectionActivity;
 import com.zebra.rfid.demo.sdksample.views.reception.ReceptionSelectionActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private Button receptionBtn, locateItemBtn, InventoryBtn, LogoutBtn;
+    private Button receptionBtn, locateItemBtn, InventoryBtn, preparationBtn, LogoutBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +30,15 @@ public class MenuActivity extends AppCompatActivity {
         receptionBtn = findViewById(R.id.receptionBtn);
         locateItemBtn = findViewById(R.id.locateItemBtn);
         InventoryBtn = findViewById(R.id.inventoryBtn);
+        preparationBtn = findViewById(R.id.preparationBtn);
         LogoutBtn = findViewById(R.id.logoutBtn);
 
         locateItemBtn.setOnClickListener(event -> {
             goToActivity(ItemSelectionActivity.class);
+        });
+
+        preparationBtn.setOnClickListener(event -> {
+            goToActivity(PreparationSelectionActivity.class);
         });
 
         receptionBtn.setOnClickListener(event -> {

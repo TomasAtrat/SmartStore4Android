@@ -1827,6 +1827,7 @@ id TOP_START
 id accelerate
 id acceptBtnReception2
 id acceptBtnReceptionAnexo
+id acceptPreparedProductBtn
 id acceptsPartialExpeditionTxt
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1905,7 +1906,9 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id backToBarcodeSelectionBtn
+id barcode4PrepTxt
 id barcodeOrderedTxt
+id barcodeSearched
 id barcodeSelectedTxt
 id barcodeTxt
 id barrier
@@ -1981,6 +1984,7 @@ id disablePostScroll
 id disableScroll
 id disjoint
 id distanceIndicator
+id distanceIndicator4preparation
 id documentTxt
 id dragDown
 id dragEnd
@@ -2017,6 +2021,7 @@ id forever
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
+id goBackToOrderSelectionBtn
 id gone
 id graph
 id graph_wrap
@@ -2056,6 +2061,7 @@ id line1
 id line3
 id linear
 id linearLayout
+id linearLayout2
 id listMode
 id list_item
 id locateItemBtn
@@ -2134,6 +2140,7 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+id orderSpinner
 id orderedQtyTxt
 id outline
 id outward
@@ -2153,6 +2160,10 @@ id phoneTxt
 id pin
 id position
 id postLayout
+id preparationBtn
+id preparedQtyTxt
+id prepateItemTitle
+id productDescriptionTxt
 id productOrderedTxt
 id progress_circular
 id progress_horizontal
@@ -2160,9 +2171,11 @@ id radio
 id ratio
 id readerStatus
 id readerStatus4location
+id readerStatus4preparation
 id readerStatus4reception
 id readerStatusLabel
 id readerStatusLabel4location
+id readerStatusLabel4preparation
 id readerStatusLabel4reception
 id receptionBtn
 id receptionNumber
@@ -2203,6 +2216,8 @@ id search_src_text
 id search_voice_btn
 id selectInventory
 id selectInventoryNumberTitle
+id selectOrder
+id selectOrderTitle
 id selectReception
 id selectReceptionNumberTitle
 id select_dialog_listview
@@ -2395,6 +2410,8 @@ layout activity_menu
 layout activity_order
 layout activity_order_form_step_two
 layout activity_perform_inventory
+layout activity_preparation
+layout activity_preparation_selection
 layout activity_reception
 layout activity_reception_selection
 layout content_main
@@ -2638,10 +2655,13 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string preparation_intent
 string reception_intent
 string search_menu_title
 string selectInventoryBtn
 string selectInventoryTitle
+string selectOrderBtn
+string selectOrderTitle
 string selectReceptionBtn
 string selectReceptionTitle
 string status_bar_notification_info_overflow

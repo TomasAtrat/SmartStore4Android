@@ -19,16 +19,12 @@ import com.google.gson.Gson;
 import com.zebra.rfid.demo.sdksample.R;
 import com.zebra.rfid.demo.sdksample.components.VolleyRequest;
 import com.zebra.rfid.demo.sdksample.models.Barcode;
-import com.zebra.rfid.demo.sdksample.models.EpcBarcode;
 import com.zebra.rfid.demo.sdksample.utils.wrappers.ListOfEpc;
 import com.zebra.rfid.demo.sdksample.utils.wrappers.ListOfStock;
-import com.zebra.rfid.demo.sdksample.views.MainActivity;
 import com.zebra.rfid.demo.sdksample.views.itemlocation.ItemLocationActivity;
 import com.zebra.rfid.demo.sdksample.views.order.OrderActivity;
 
 import org.json.JSONObject;
-
-import java.util.List;
 
 public class ProductService {
 
