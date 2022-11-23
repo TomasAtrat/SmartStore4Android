@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.zebra.rfid.api3.InvalidUsageException;
+import com.zebra.rfid.api3.OperationFailureException;
 import com.zebra.rfid.api3.RFIDReader;
 import com.zebra.rfid.api3.TagData;
 import com.zebra.rfid.demo.sdksample.R;
@@ -55,15 +57,7 @@ public class PreparationValidationActivity extends AppCompatActivity implements 
         instantiateVariables();
 
         rfidHandler = new RFIDHandler();
-
-        RFIDReader reader = RFIDHandler.getReader();
-
-        if (reader == null || reader.isConnected())
-            rfidHandler.onCreate(this, this, RfidUseCase.INVENTORY, readerStatus);
-        else {
-            Log.d(TAG, "Reader stills alive!");
-            rfidHandler.resetReaderConfig(RfidUseCase.INVENTORY);
-        }
+        rfidHandler.onCreate(this, this, RfidUseCase.INVENTORY, readerStatus);
     }
 
     private void instantiateVariables() {
@@ -93,6 +87,24 @@ public class PreparationValidationActivity extends AppCompatActivity implements 
                 .setTitle("Guardar cambios")
                 .setMessage("Al aceptar confirmas que has comprobado las diferencias generadas")
                 .setPositiveButton(android.R.string.yes, (dialog, whichButton) -> {
+                    try {
+                        RFIDHandler.getReader().Actions.Inventory.stop();
+                        // add delay to stop event and abort completed
+                        Thread.sleep(100);
+                        // Update reader details
+                        //UpdateReaderConnection();
+                        // update fields before getting tags
+                        //getTagReportingfields();
+                        //
+                        RFIDHandler.getReader().Actions.getBatchedTags();
+                        RFIDHandler.getReader().Actions.purgeTags();
+                    } catch (InvalidUsageException e) {
+                        e.printStackTrace();
+                    } catch (OperationFailureException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     preparationService.savePreparation(details);
                 })
                 .setNegativeButton(R.string.CancelButton, null).show();

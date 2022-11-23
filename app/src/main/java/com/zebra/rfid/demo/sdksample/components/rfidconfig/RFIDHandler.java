@@ -1,5 +1,6 @@
 package com.zebra.rfid.demo.sdksample.components.rfidconfig;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.TextView;
@@ -21,10 +22,15 @@ import com.zebra.rfid.demo.sdksample.components.rfidconfig.actionStrategies.Rfid
 import com.zebra.rfid.demo.sdksample.components.rfidconfig.factories.RfidConfigFactory;
 import com.zebra.rfid.demo.sdksample.components.rfidconfig.factories.RfidFactory;
 import com.zebra.rfid.demo.sdksample.components.rfidconfig.rfidEventHandlers.ResponseHandlerInterface;
+import com.zebra.rfid.demo.sdksample.views.preparation.PreparationValidationActivity;
 
 import java.util.ArrayList;
 
 public class RFIDHandler implements Readers.RFIDReaderEventHandler {
+
+    public RFIDHandler() {
+        eventHandler = null;
+    }
 
     final static String TAG = "RFID_SAMPLE";
 
@@ -38,10 +44,19 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
     private ResponseHandlerInterface responseHandlerInterface;
     private RfidUseCase useCase;
     private AppCompatActivity context;
+    private Context appContext;
     private RfidActionStrategy actionStrategy;
 
     private int MAX_POWER = 300;
     String readername = "RFD850019055523021626";
+
+    public Context getContext() {
+        return appContext;
+    }
+
+    public void setContext(Context context) {
+        this.appContext = context;
+    }
 
     public static RFIDReader getReader() {
         return reader;
@@ -60,8 +75,9 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
         InitSDK();
     }
 
-    public void resetReaderConfig(RfidUseCase useCase){
+    public void resetReaderConfig(RfidUseCase useCase,ResponseHandlerInterface responseHandler){
         this.useCase = useCase;
+        responseHandlerInterface = responseHandler;
         ConfigureReader();
     }
 
@@ -239,7 +255,7 @@ private class CreateInstanceTask extends AsyncTask<Void, Void, Void> {
     protected Void doInBackground(Void... voids) {
         Log.d(TAG, "CreateInstanceTask");
         InvalidUsageException invalidUsageException = null;
-        readers = new Readers(context, ENUM_TRANSPORT.ALL);
+        readers = new Readers(appContext, ENUM_TRANSPORT.ALL);
         try {
             availableRFIDReaderList = readers.GetAvailableRFIDReaderList();
         } catch (InvalidUsageException e) {
@@ -249,7 +265,7 @@ private class CreateInstanceTask extends AsyncTask<Void, Void, Void> {
             readers.Dispose();
             readers = null;
             if (readers == null) {
-                readers = new Readers(context, ENUM_TRANSPORT.BLUETOOTH);
+                readers = new Readers(appContext, ENUM_TRANSPORT.BLUETOOTH);
             }
         }
         return null;
@@ -305,11 +321,11 @@ private class ConnectionTask extends AsyncTask<Void, Void, String> {
     }
 
     public void onPause() {
-        //disconnect();
+        disconnect();
     }
 
     public void onDestroy() {
-        //dispose();
+        dispose();
     }
 
     //endregion

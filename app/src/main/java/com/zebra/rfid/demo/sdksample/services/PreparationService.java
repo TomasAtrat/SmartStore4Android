@@ -28,7 +28,7 @@ public class PreparationService {
     public List<String> validatePreparedDetail(PreparationDetail detail, String barcode, int preparedQty) {
         List<String> errors = new ArrayList<>();
 
-        if (detail.getBarcode().getId().equalsIgnoreCase((barcode)))
+        if (!detail.getBarcode().getId().equalsIgnoreCase((barcode)))
             errors.add("El código de barras es incorrecto");
 
         if (preparedQty > detail.getOrderedQty())
@@ -60,6 +60,8 @@ public class PreparationService {
             }
 
             PreparationWrapper wrapper = new PreparationWrapper(preparation, details);
+
+            preparationClient.sendPreparationAndDetailsAsyncToERP(wrapper);
 
             preparationClient.savePreparationAndDetailsAsync(wrapper);
         } catch (Exception e) {

@@ -2,8 +2,10 @@ package com.zebra.rfid.demo.sdksample.components.clients;
 
 import static com.zebra.rfid.demo.sdksample.utils.Constants.ADD_PREPARATION_SERVICE;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.API_URL;
+import static com.zebra.rfid.demo.sdksample.utils.Constants.ERP_URL;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.GET_PREPARATION_SERVICE;
 import static com.zebra.rfid.demo.sdksample.utils.Constants.GET_TOP10_EPC_BARCODE_SERVICE;
+import static com.zebra.rfid.demo.sdksample.views.preparation.PreparationActivity.currentDetail;
 import static com.zebra.rfid.demo.sdksample.views.preparation.PreparationActivity.listOfTenEpc;
 import static com.zebra.rfid.demo.sdksample.views.preparation.PreparationActivity.preparationDetails;
 import static com.zebra.rfid.demo.sdksample.views.preparation.PreparationActivity.productDescriptionTxt;
@@ -23,6 +25,7 @@ import com.zebra.rfid.demo.sdksample.services.AuthService;
 import com.zebra.rfid.demo.sdksample.utils.wrappers.ListOfEpc;
 import com.zebra.rfid.demo.sdksample.utils.wrappers.PreparationWrapper;
 import com.zebra.rfid.demo.sdksample.views.MenuActivity;
+import com.zebra.rfid.demo.sdksample.views.preparation.PreparationActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -56,9 +59,12 @@ public class PreparationClient {
             PreparationWrapper wrapper = gson.fromJson(response.toString(), PreparationWrapper.class);
             preparationDetails = wrapper.getDetails();
 
-            if(preparationDetails != null && preparationDetails.size() > 0){
-                productDescriptionTxt.setText(preparationDetails.get(0).getBarcode().getProduct().getDescription());
-                getTopTenEpcByBarcodeAsync(preparationDetails.get(0).getBarcode());
+            if (preparationDetails != null && preparationDetails.size() > 0) {
+                Barcode firstBarcode = preparationDetails.get(0).getBarcode();
+                currentDetail = preparationDetails.get(0);
+                productDescriptionTxt.setText(firstBarcode.getProduct().getDescription());
+                PreparationActivity.setBarcodeTitle(firstBarcode.getId());
+                getTopTenEpcByBarcodeAsync(firstBarcode);
             }
 
         } catch (Exception e) {
@@ -86,13 +92,31 @@ public class PreparationClient {
         Log.i(TAG, new Gson().toJson(listOfTenEpc));
     }
 
+    public void sendPreparationAndDetailsAsyncToERP(PreparationWrapper wrapper) throws JSONException {
+        final String mURL = ERP_URL + ADD_PREPARATION_SERVICE;
+        Gson gson = new GsonBuilder()
+                .setDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz").create();
+
+        String dac = gson.toJson(wrapper);
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST,
+                mURL,
+                new JSONObject(gson.toJson(wrapper)),
+                null,
+                error -> {
+                    Toast.makeText(context, "Ocurrió un error al envíar los datos al ERP", Toast.LENGTH_LONG).show();
+                    Log.e(TAG, error.getMessage());
+                });
+
+        VolleyRequest.getInstance(context).addToRequestQueue(request);
+    }
+
     public void savePreparationAndDetailsAsync(PreparationWrapper wrapper) throws JSONException {
         final String mURL = API_URL + ADD_PREPARATION_SERVICE;
-
         Gson gson = new GsonBuilder()
-                .setDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ").create();
+                .setDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz").create();
 
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET,
+        String dac = gson.toJson(wrapper);
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST,
                 mURL,
                 new JSONObject(gson.toJson(wrapper)),
                 this::onSavePreparationResponse,

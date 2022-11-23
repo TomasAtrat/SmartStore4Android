@@ -1,5 +1,7 @@
 package com.zebra.rfid.demo.sdksample.utils.data;
 
+import static java.lang.System.lineSeparator;
+
 import com.zebra.rfid.demo.sdksample.models.Barcode;
 
 import java.io.Serializable;
@@ -47,5 +49,15 @@ public class PreparationProblems implements Serializable {
 
     public void setDifference(Integer difference) {
         this.difference = difference;
+    }
+
+    @Override
+    public String toString() {
+        return "PROBLEMA: " +
+                barcode +
+                "-> Diferencia = " + difference +
+                lineSeparator()
+                + "Cantidad leída / Cantidad supuestamente preparada = " + realQtyPrepared
+                + " / " + supposedQtyPrepared;
     }
 }

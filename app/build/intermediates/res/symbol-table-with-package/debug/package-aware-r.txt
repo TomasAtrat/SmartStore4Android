@@ -2163,6 +2163,7 @@ id postLayout
 id preparationBtn
 id preparedQtyTxt
 id prepateItemTitle
+id problemsList
 id productDescriptionTxt
 id productOrderedTxt
 id progress_circular
@@ -2171,10 +2172,12 @@ id radio
 id ratio
 id readerStatus
 id readerStatus4location
+id readerStatus4prepValidation
 id readerStatus4preparation
 id readerStatus4reception
 id readerStatusLabel
 id readerStatusLabel4location
+id readerStatusLabel4prepValidation
 id readerStatusLabel4preparation
 id readerStatusLabel4reception
 id receptionBtn
@@ -2190,6 +2193,7 @@ id right_side
 id rounded
 id row_index_key
 id saveInventory
+id savePreparation
 id saveReception
 id save_non_transition_alpha
 id save_overlay_view
@@ -2256,6 +2260,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id subtitle
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -2412,6 +2417,7 @@ layout activity_order_form_step_two
 layout activity_perform_inventory
 layout activity_preparation
 layout activity_preparation_selection
+layout activity_preparation_validation
 layout activity_reception
 layout activity_reception_selection
 layout content_main
@@ -2656,6 +2662,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string preparation_intent
+string previousPreparedDetail
 string reception_intent
 string search_menu_title
 string selectInventoryBtn

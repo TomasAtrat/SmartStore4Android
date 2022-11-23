@@ -39,10 +39,11 @@ import java.util.List;
 public class PreparationActivity extends AppCompatActivity implements ResponseHandlerInterface {
 
     private final String TAG = "PreparationActivity";
-    private final String TITLE_FORMAT = "Código de barras: %s, %s Cantidad preparar %d";
+    private static String TITLE_FORMAT = "Código de barras: %s, %s Cantidad preparar %d";
 
     private Button backBtn, continueBtn;
-    private TextView readerStatus, barcodeTitle;
+    private TextView readerStatus;
+    public static TextView barcodeTitle;
     private HalfGauge distanceIndicator;
     private EditText barcodeReadTxt, preparedQtyTxt;
     public static EditText productDescriptionTxt;
@@ -50,7 +51,7 @@ public class PreparationActivity extends AppCompatActivity implements ResponseHa
     private OrderInfo orderInfo;
     public static List<EpcBarcode> listOfTenEpc;
     public static List<PreparationDetail> preparationDetails;
-    private PreparationDetail currentDetail;
+    public static PreparationDetail currentDetail;
     private int detailsIterator;
 
     private RFIDHandler rfidHandler;
@@ -98,6 +99,7 @@ public class PreparationActivity extends AppCompatActivity implements ResponseHa
         setUpDistanceIndicator();
 
         rfidHandler = new RFIDHandler();
+        rfidHandler.setContext(this.getApplicationContext());
         rfidHandler.onCreate(this, this, RfidUseCase.SEARCH_ITEM, readerStatus);
     }
 
@@ -183,15 +185,17 @@ public class PreparationActivity extends AppCompatActivity implements ResponseHa
         currentDetail = preparationDetails.get(detailsIterator);
 
         Barcode barcode = currentDetail.getBarcode();
+        setBarcodeTitle(barcode.getId());
+        preparationService.getTopTenEpcByBarcodeAsync(barcode);
+    }
 
+    public static void setBarcodeTitle(String barcode){
         @SuppressLint("DefaultLocale") String title = format(TITLE_FORMAT,
-                barcode.getId(),
+                barcode,
                 lineSeparator(),
                 currentDetail.getOrderedQty());
 
         barcodeTitle.setText(title);
-
-        preparationService.getTopTenEpcByBarcodeAsync(barcode);
     }
 
     @Override

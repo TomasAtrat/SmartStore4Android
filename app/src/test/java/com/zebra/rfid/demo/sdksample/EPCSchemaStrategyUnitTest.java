@@ -21,7 +21,7 @@ public class EPCSchemaStrategyUnitTest {
     @Test
     public void SGTIN96SchemaStrategyShouldReturnCorrectBarcodeFromEPC() throws Exception {
         EPCSchemaStrategy epcSchema = new SGTIN96Schema();
-        Barcode barcode = epcSchema.getBarcodeFromEPC("3035D7CF14003C0000000001");
+        Barcode barcode = epcSchema.getBarcodeFromEPC("3035E1A3380353C0000000001");
         assertEquals("7730117002408", barcode.getId());
     }
 
