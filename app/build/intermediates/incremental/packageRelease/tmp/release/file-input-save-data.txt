@@ -1,0 +1,23 @@
+#Internal package file, do not edit.
+#Tue Nov 22 23:38:50 UYT 2022
+2.base=C\:\\Zebra RFID SDK\\Zebra_RFIDAPI3_SDK_2.0.2.100\\SDKSample\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+0.path=classes.dex
+2.baseType=DIRECTORY
+3.base=C\:\\Zebra RFID SDK\\Zebra_RFIDAPI3_SDK_2.0.2.100\\SDKSample\\app\\build\\intermediates\\merged_assets\\release\\out
+2.set=DEX
+1.path=classes2.dex
+4.base=C\:\\Zebra RFID SDK\\Zebra_RFIDAPI3_SDK_2.0.2.100\\SDKSample\\app\\build\\intermediates\\merged_assets\\release\\out
+count=5
+2.path=classes3.dex
+4.set=ASSET
+3.path=anychart-ui.min.css
+3.baseType=DIRECTORY
+1.set=DEX
+4.path=anychart-bundle.min.js
+1.baseType=DIRECTORY
+0.base=C\:\\Zebra RFID SDK\\Zebra_RFIDAPI3_SDK_2.0.2.100\\SDKSample\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+0.baseType=DIRECTORY
+3.set=ASSET
+1.base=C\:\\Zebra RFID SDK\\Zebra_RFIDAPI3_SDK_2.0.2.100\\SDKSample\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+4.baseType=DIRECTORY
+0.set=DEX
